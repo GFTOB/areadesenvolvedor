@@ -1,0 +1,72 @@
+type: object
+required:
+  - name
+  - code
+  - chargingTriggerInfo
+  - prices
+  - minimum
+  - maximum
+properties:
+  name:
+    type: string
+    maxLength: 250
+    description: Nome do Serviço que incide sobre tipo de conta selecionado para pessoa jurídica(Campo Livre)
+    example: "Evento personalizado"
+  code:
+    type: string
+    maxLength: 100
+    description: Sigla de identificação de Outros Serviços que incidem sobre os tipos de contas informados.
+    example: "EVENTO_PERSONALIZADO"
+  chargingTriggerInfo:
+    type: string
+    maxLength: 2000
+    pattern: \w*\W*
+    description: Fatos geradores de cobrança que incidem sobre serviço que compõe o Pacote de Serviços.
+    example: "Cobrança devido a evento personalizado"
+  prices:
+    type: array
+    items:
+      $ref: ./Price.yaml
+    minItems: 4
+    maxItems: 4
+    description: Lista distribuição preços tarifas de serviços
+  minimum:
+    type: object
+    required:
+      - value
+      - currency
+    properties:
+      value:
+        type: string
+        pattern: ^((\d{1,9}\.\d{2}){1}|NA)$
+        maxLength: 12
+        x-cds-type: AmountString
+        description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
+        example: "1350.00"
+      currency:
+        type: string
+        pattern: ^(\w{3}){1}$
+        maxLength: 3
+        x-cds-type: CurrencyString
+        description: Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217
+        example: "BRL"
+  maximum:
+    type: object
+    required:
+      - value
+      - currency
+    properties:
+      value:
+        type: string
+        pattern: ^((\d{1,9}\.\d{2}){1}|NA)$
+        maxLength: 12
+        x-cds-type: AmountString
+        description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
+        example: "8800.00"
+      currency:
+        type: string
+        pattern: ^(\w{3}){1}$
+        maxLength: 3
+        x-cds-type: CurrencyString
+        description: Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217
+        example: "BRL"

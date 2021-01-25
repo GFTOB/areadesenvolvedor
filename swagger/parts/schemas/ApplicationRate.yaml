@@ -1,0 +1,13 @@
+type: object
+properties:
+  interval:
+    $ref: ./enum/EnumApplicationIntervals.yaml
+  indexer:
+    $ref: ./Indexer.yaml
+    description: Percentual que corresponde a mediana (taxa efetiva) cobrada do cliente
+  customers:
+    $ref: ./Customer.yaml
+required:
+  - interval
+  - indexer
+  - customers
