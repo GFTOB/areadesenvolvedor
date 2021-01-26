@@ -131,7 +131,7 @@ paths:
                                                       - countrySubDivision
                                                       - postCode
                                                     allOf:
-                                                      - $ref: '#/paths/~1branches/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/branches/items/properties/postalAddresses/allOf/0'
+                                                      - $ref: '#/paths/~1branches/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/branches/items/properties/postalAddress/allOf/0'
                                                   availability:
                                                     type: object
                                                     properties:
@@ -532,7 +532,7 @@ paths:
                                           - code
                                           - checkDigit
                                           - name
-                                      postalAddresses:
+                                      postalAddress:
                                         type: object
                                         required:
                                           - address
@@ -861,7 +861,7 @@ paths:
                                 townName: Marília
                                 ibgeCode: '3550308'
                                 countrySubDivision: SP
-                                postCode: 17500-001
+                                postCode: '17500001'
                                 country: Brasil
                                 countryCode: BRA
                                 geographicCoordinates:
