@@ -1156,7 +1156,6 @@ components:
       properties:
         standards:
           type: array
-          description: Relação da disponbilidade de atendimento
           maxItems: 7
           items:
             required:
@@ -1187,13 +1186,11 @@ components:
                 description: Horário de fechamento (UTC)
         exception:
           type: string
-          description: Em campo texto devem ser registradas todas as Exceções para o não atendimento.
           maxLength: 2000
           pattern: \w*\W*
           example: 'Exceto feriados municipais, nacionais e estaduais'
         isPublicAccessAllowed:
           type: boolean
-          description: Indica se a instalação do Correspondente Bancário tem acesso restrito a clientes.
           example: false
     BankingAgentIdentification:
       type: object
@@ -1221,13 +1218,10 @@ components:
       properties:
         postalAddress:
           $ref: '#/components/schemas/BankingAgentPostalAddress'
-          description: Endereço do correspondente.
         availability:
           $ref: '#/components/schemas/BankingAgentAvailability'
-          description: Dias de funcionamento do correspondente.
         phones:
           type: array
-          description: Lista de telefones do correspondente.
           items:
             $ref: '#/components/schemas/Phone'
     BankingAgentPostalAddress:
@@ -1573,7 +1567,6 @@ components:
       properties:
         name:
           type: string
-          description: 'Nome da Instituição, pertencente à Marca, responsável pela Dependência.'
           maxLength: 80
           pattern: \w*\W*
         cnpjNumber:
@@ -1587,7 +1580,6 @@ components:
           example: '45086338000178'
         urlComplementaryList:
           type: string
-          description: 'URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber. Os contidos nessa lista possuem as mesmas características para produtos e serviços. Endereço eletrônico de acesso ao canal. URLs são limitadas a 2048 caracteres mas, para o contexto do Sistema Financeiro aberto, será adotado a metade deste tamanho.'
           maxLength: 1024
           pattern: \w*\W*
           example: 'https://example.com/mobile-banking'
@@ -1733,7 +1725,6 @@ components:
           description: Lista distribuição preços tarifas de serviços
         minimum:
           type: object
-          description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
           required:
             - value
             - currency
@@ -1754,7 +1745,6 @@ components:
               example: BRL
         maximum:
           type: object
-          description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
           required:
             - value
             - currency
@@ -1791,10 +1781,8 @@ components:
           example: Cartão Vantagens
         identification:
           $ref: '#/components/schemas/CreditCardIdentification'
-          description: Informações de identificação do cartão de crédito
         rewardsProgram:
           $ref: '#/components/schemas/CreditCardRewardsProgram'
-          description: Informações sobre programas de recompensa presentes no cartão de crédito
         fees:
           type: object
           description: Objeto que reúne informações de tarifas de serviços
@@ -1812,7 +1800,6 @@ components:
           $ref: '#/components/schemas/CreditCardInterest'
         termsConditions:
           $ref: '#/components/schemas/CreditCardTermsConditions'
-          description: Informações sobre termos e condições para aquisição e cancelamento
     BusinessCreditCardBrand:
       type: object
       required:
@@ -1922,7 +1909,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/FinancingService'
-            description: Lista das Tarifas cobradas sobre Serviços.
           minItems: 1
       required:
         - services
@@ -2236,7 +2222,6 @@ components:
       properties:
         product:
           type: object
-          description: 'Categoria atribuída a um cartão de pagamento, sob uma certa denominação, que lhe agrega um conjunto de vantagens, diferenciando-o de acordo com o perfil do portador'
           required:
             - type
             - additionalInfo
@@ -2275,7 +2260,6 @@ components:
               example: NA
         creditCard:
           type: object
-          description: Categoria de Bandeiras de Cartões de Crédito.
           required:
             - network
             - additionalInfo
@@ -2553,7 +2537,7 @@ components:
       properties:
         rate:
           type: string
-          description: 'Percentual dos clientes de cada faixa relativa ao serviço ofertado, para pessoa natural informado no período, conforme Res nº32, BCB, 2020.'
+          description: Percentual de clientes em cada faixa.
           pattern: '^[0-9](\.[0-9]{4})$|^NA$'
           example: '0.1500'
           maxLength: 6
@@ -2562,7 +2546,6 @@ components:
       properties:
         identification:
           $ref: '#/components/schemas/ElectronicChannelIdentification'
-          description: Tipo de canal de atendimento.
         services:
           type: array
           items:
@@ -3067,7 +3050,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Price'
-            description: Tipo de canal de atendimento.
           minItems: 4
           maxItems: 4
         minimum:
@@ -3172,7 +3154,6 @@ components:
           maxItems: 4
         minimum:
           type: object
-          description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.
           properties:
             rate:
               type: string
@@ -3182,7 +3163,6 @@ components:
               example: '0.0456'
         maximum:
           type: object
-          description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.
           properties:
             rate:
               type: string
@@ -3470,7 +3450,6 @@ components:
             $ref: '#/components/schemas/Price'
           minItems: 4
           maxItems: 4
-          description: 'Valor da mediana da tarifa, relativa ao serviço ofertado, informado no período.'
         minimum:
           type: object
           description: Valor mínimo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.
@@ -3595,7 +3574,6 @@ components:
           $ref: '#/components/schemas/Currency'
         customers:
           $ref: '#/components/schemas/Customer'
-          description: Percentual de clientes em cada faixa
     PeakTPSMetrics:
       type: object
       description: Número máximo de transações por segundo.
@@ -3709,10 +3687,8 @@ components:
           example: Cartão Universitário
         identification:
           $ref: '#/components/schemas/CreditCardIdentification'
-          description: Informações de identificação do cartão de crédito.
         rewardsProgram:
           $ref: '#/components/schemas/CreditCardRewardsProgram'
-          description: Informações sobre programas de recompensa presentes no cartão de crédito.
         fees:
           type: object
           description: Objeto que reúne informações de tarifas de serviços
@@ -3730,7 +3706,6 @@ components:
           $ref: '#/components/schemas/CreditCardInterest'
         termsConditions:
           $ref: '#/components/schemas/CreditCardTermsConditions'
-          description: Informações sobre termos e condições para aquisição e cancelamento.
     PersonalCreditCardBrand:
       type: object
       required:

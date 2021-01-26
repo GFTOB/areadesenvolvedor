@@ -123,7 +123,6 @@ paths:
                                                   - postalAddress
                                                 properties:
                                                   postalAddress:
-                                                    description: Endereço do correspondente.
                                                     type: object
                                                     required:
                                                       - address
@@ -134,12 +133,10 @@ paths:
                                                     allOf:
                                                       - $ref: '#/paths/~1branches/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/branches/items/properties/postalAddresses/allOf/0'
                                                   availability:
-                                                    description: Dias de funcionamento do correspondente.
                                                     type: object
                                                     properties:
                                                       standards:
                                                         type: array
-                                                        description: Relação da disponbilidade de atendimento
                                                         maxItems: 7
                                                         items:
                                                           required:
@@ -170,17 +167,14 @@ paths:
                                                               description: Horário de fechamento (UTC)
                                                       exception:
                                                         type: string
-                                                        description: Em campo texto devem ser registradas todas as Exceções para o não atendimento.
                                                         maxLength: 2000
                                                         pattern: \w*\W*
                                                         example: 'Exceto feriados municipais, nacionais e estaduais'
                                                       isPublicAccessAllowed:
                                                         type: boolean
-                                                        description: Indica se a instalação do Correspondente Bancário tem acesso restrito a clientes.
                                                         example: false
                                                   phones:
                                                     type: array
-                                                    description: Lista de telefones do correspondente.
                                                     items:
                                                       $ref: '#/paths/~1branches/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/branches/items/properties/phones/items/allOf/0'
                                               minItems: 1
@@ -458,7 +452,6 @@ paths:
                               properties:
                                 name:
                                   type: string
-                                  description: 'Nome da Instituição, pertencente à Marca, responsável pela Dependência.'
                                   maxLength: 80
                                   pattern: \w*\W*
                                 cnpjNumber:
@@ -472,7 +465,6 @@ paths:
                                   example: '45086338000178'
                                 urlComplementaryList:
                                   type: string
-                                  description: 'URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber. Os contidos nessa lista possuem as mesmas características para produtos e serviços. Endereço eletrônico de acesso ao canal. URLs são limitadas a 2048 caracteres mas, para o contexto do Sistema Financeiro aberto, será adotado a metade deste tamanho.'
                                   maxLength: 1024
                                   pattern: \w*\W*
                                   example: 'https://example.com/mobile-banking'
@@ -985,7 +977,6 @@ paths:
                                     type: object
                                     properties:
                                       identification:
-                                        description: Tipo de canal de atendimento.
                                         type: object
                                         required:
                                           - type

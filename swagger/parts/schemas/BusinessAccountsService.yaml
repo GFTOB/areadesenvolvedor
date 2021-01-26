@@ -32,7 +32,6 @@ properties:
     description: Lista distribuição preços tarifas de serviços
   minimum:
     type: object
-    description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
     required:
       - value
       - currency
@@ -53,7 +52,6 @@ properties:
         example: "BRL"
   maximum:
     type: object
-    description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
     required:
       - value
       - currency

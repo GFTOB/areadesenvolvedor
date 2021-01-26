@@ -22,7 +22,6 @@ properties:
     type: array
     items:
       $ref: ./Price.yaml
-      description: Tipo de canal de atendimento.
     minItems: 4
     maxItems: 4
   minimum:

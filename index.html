@@ -10305,7 +10305,7 @@ This operation does not require authentication
 <td>standards</td>
 <td>[any]</td>
 <td>false</td>
-<td>Relação da disponbilidade de atendimento</td>
+<td>none</td>
 </tr>
 <tr>
 <td>» weekday</td>
@@ -10329,13 +10329,13 @@ This operation does not require authentication
 <td>exception</td>
 <td>string</td>
 <td>false</td>
-<td>Em campo texto devem ser registradas todas as Exceções para o não atendimento.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>isPublicAccessAllowed</td>
 <td>boolean</td>
 <td>false</td>
-<td>Indica se a instalação do Correspondente Bancário tem acesso restrito a clientes.</td>
+<td>none</td>
 </tr>
 </tbody></table>
 <h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
@@ -10473,19 +10473,19 @@ This operation does not require authentication
 <td>postalAddress</td>
 <td><a href="#schemabankingagentpostaladdress">BankingAgentPostalAddress</a></td>
 <td>true</td>
-<td>Endereço do correspondente.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>availability</td>
 <td><a href="#schemabankingagentavailability">BankingAgentAvailability</a></td>
 <td>false</td>
-<td>Dias de funcionamento do correspondente.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>phones</td>
 <td>[<a href="#schemaphone">Phone</a>]</td>
 <td>false</td>
-<td>Lista de telefones do correspondente.</td>
+<td>none</td>
 </tr>
 </tbody></table>
 
@@ -11636,7 +11636,7 @@ This operation does not require authentication
 <td>name</td>
 <td>string</td>
 <td>true</td>
-<td>Nome da Instituição, pertencente à Marca, responsável pela Dependência.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>cnpjNumber</td>
@@ -11648,7 +11648,7 @@ This operation does not require authentication
 <td>urlComplementaryList</td>
 <td>string</td>
 <td>false</td>
-<td>URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber. Os contidos nessa lista possuem as mesmas características para produtos e serviços. Endereço eletrônico de acesso ao canal. URLs são limitadas a 2048 caracteres mas, para o contexto do Sistema Financeiro aberto, será adotado a metade deste tamanho.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>branches</td>
@@ -12297,7 +12297,7 @@ This operation does not require authentication
 <td>minimum</td>
 <td>object</td>
 <td>true</td>
-<td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
+<td>none</td>
 </tr>
 <tr>
 <td>» value</td>
@@ -12315,7 +12315,7 @@ This operation does not require authentication
 <td>maximum</td>
 <td>object</td>
 <td>true</td>
-<td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
+<td>none</td>
 </tr>
 <tr>
 <td>» value</td>
@@ -12531,13 +12531,13 @@ This operation does not require authentication
 <td>identification</td>
 <td><a href="#schemacreditcardidentification">CreditCardIdentification</a></td>
 <td>true</td>
-<td>Informações de identificação do cartão de crédito</td>
+<td>none</td>
 </tr>
 <tr>
 <td>rewardsProgram</td>
 <td><a href="#schemacreditcardrewardsprogram">CreditCardRewardsProgram</a></td>
 <td>true</td>
-<td>Informações sobre programas de recompensa presentes no cartão de crédito</td>
+<td>none</td>
 </tr>
 <tr>
 <td>fees</td>
@@ -12561,7 +12561,7 @@ This operation does not require authentication
 <td>termsConditions</td>
 <td><a href="#schemacreditcardtermsconditions">CreditCardTermsConditions</a></td>
 <td>true</td>
-<td>Informações sobre termos e condições para aquisição e cancelamento</td>
+<td>none</td>
 </tr>
 </tbody></table>
 
@@ -15153,7 +15153,7 @@ This operation does not require authentication
 <td>product</td>
 <td>object</td>
 <td>true</td>
-<td>Categoria atribuída a um cartão de pagamento, sob uma certa denominação, que lhe agrega um conjunto de vantagens, diferenciando-o de acordo com o perfil do portador</td>
+<td>none</td>
 </tr>
 <tr>
 <td>» type</td>
@@ -15171,7 +15171,7 @@ This operation does not require authentication
 <td>creditCard</td>
 <td>object</td>
 <td>true</td>
-<td>Categoria de Bandeiras de Cartões de Crédito.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>» network</td>
@@ -15892,7 +15892,7 @@ This operation does not require authentication
 <td>rate</td>
 <td>string</td>
 <td>true</td>
-<td>Percentual dos clientes de cada faixa relativa ao serviço ofertado, para pessoa natural informado no período, conforme Res nº32, BCB, 2020.</td>
+<td>Percentual de clientes em cada faixa.</td>
 </tr>
 </tbody></table>
 
@@ -15932,7 +15932,7 @@ This operation does not require authentication
 <td>identification</td>
 <td><a href="#schemaelectronicchannelidentification">ElectronicChannelIdentification</a></td>
 <td>true</td>
-<td>Tipo de canal de atendimento.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>services</td>
@@ -17743,7 +17743,7 @@ This operation does not require authentication
 <td>minimum</td>
 <td>object</td>
 <td>false</td>
-<td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>» rate</td>
@@ -17755,7 +17755,7 @@ This operation does not require authentication
 <td>maximum</td>
 <td>object</td>
 <td>false</td>
-<td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>» rate</td>
@@ -18437,7 +18437,7 @@ This operation does not require authentication
 <td>prices</td>
 <td>[<a href="#schemaprice">Price</a>]</td>
 <td>true</td>
-<td>Valor da mediana da tarifa, relativa ao serviço ofertado, informado no período.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>minimum</td>
@@ -18665,7 +18665,7 @@ This operation does not require authentication
 <td>customers</td>
 <td><a href="#schemacustomer">Customer</a></td>
 <td>true</td>
-<td>Percentual de clientes em cada faixa</td>
+<td>none</td>
 </tr>
 </tbody></table>
 
@@ -19565,13 +19565,13 @@ This operation does not require authentication
 <td>identification</td>
 <td><a href="#schemacreditcardidentification">CreditCardIdentification</a></td>
 <td>true</td>
-<td>Informações de identificação do cartão de crédito.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>rewardsProgram</td>
 <td><a href="#schemacreditcardrewardsprogram">CreditCardRewardsProgram</a></td>
 <td>true</td>
-<td>Informações sobre programas de recompensa presentes no cartão de crédito.</td>
+<td>none</td>
 </tr>
 <tr>
 <td>fees</td>
@@ -19595,7 +19595,7 @@ This operation does not require authentication
 <td>termsConditions</td>
 <td><a href="#schemacreditcardtermsconditions">CreditCardTermsConditions</a></td>
 <td>true</td>
-<td>Informações sobre termos e condições para aquisição e cancelamento.</td>
+<td>none</td>
 </tr>
 </tbody></table>
 
