@@ -23,6 +23,7 @@ properties:
     maxItems: 4
   minimum:
     type: object
+    description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.
     properties:
       rate:
         type: string
@@ -32,6 +33,7 @@ properties:
         example: "0.0456"
   maximum:
     type: object
+    description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.
     properties:
       rate:
         type: string

@@ -2,6 +2,7 @@ type: object
 properties:
   identification:
     $ref: ./ElectronicChannelIdentification.yaml
+    description: Tipo de canal de atendimento.
   services:
     type: array
     items:

@@ -4,9 +4,12 @@ required:
 properties:
   postalAddress:
     $ref: ./BankingAgentPostalAddress.yaml
+    description: Endereço do correspondente.
   availability:
     $ref: ./BankingAgentAvailability.yaml
+    description: Dias de funcionamento do correspondente.
   phones:
     type: array
+    description: Lista de telefones do correspondente.
     items:
       $ref: ./Phone.yaml

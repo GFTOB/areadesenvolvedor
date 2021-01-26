@@ -4,7 +4,7 @@ required:
 properties:
   rate:
     type: string
-    description: Percentual de clientes em cada faixa.
+    description: Percentual dos clientes de cada faixa relativa ao serviço ofertado, para pessoa natural informado no período, conforme Res nº32, BCB, 2020.
     pattern: ^[0-9](\.[0-9]{4})$|^NA$
     example: "0.1500"
     maxLength: 6

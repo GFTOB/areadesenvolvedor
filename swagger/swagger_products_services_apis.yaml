@@ -450,6 +450,7 @@ paths:
                                                     $ref: '#/paths/~1personal-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalAccounts/items/properties/termsConditions/properties/minimumBalance/properties/currency'
                                                   customers:
                                                     $ref: '#/paths/~1personal-unarranged-account-overdraft/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalUnarrangedAccountOverdraft/properties/interestRates/items/properties/applications/items/properties/customers'
+                                                    description: Percentual de clientes em cada faixa
                                               minItems: 4
                                               maxItems: 4
                                               description: Lista distribuição preços tarifas de serviços
@@ -985,6 +986,7 @@ paths:
                                                   description: Lista distribuição preços tarifas de serviços
                                                 minimum:
                                                   type: object
+                                                  description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
                                                   required:
                                                     - value
                                                     - currency
@@ -1005,6 +1007,7 @@ paths:
                                                       example: BRL
                                                 maximum:
                                                   type: object
+                                                  description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
                                                   required:
                                                     - value
                                                     - currency
@@ -1325,6 +1328,7 @@ paths:
                                                     $ref: '#/paths/~1business-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessAccounts/items/properties/fees/properties/services/items/properties/prices/items'
                                                   minItems: 4
                                                   maxItems: 4
+                                                  description: 'Valor da mediana da tarifa, relativa ao serviço ofertado, informado no período.'
                                                 minimum:
                                                   type: object
                                                   description: Valor mínimo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.
@@ -2568,6 +2572,7 @@ paths:
                                         description: Denominação/Identificação do nome da conta (cartão de crédito)
                                         example: Cartão Universitário
                                       identification:
+                                        description: Informações de identificação do cartão de crédito.
                                         type: object
                                         required:
                                           - product
@@ -2575,6 +2580,7 @@ paths:
                                         properties:
                                           product:
                                             type: object
+                                            description: 'Categoria atribuída a um cartão de pagamento, sob uma certa denominação, que lhe agrega um conjunto de vantagens, diferenciando-o de acordo com o perfil do portador'
                                             required:
                                               - type
                                               - additionalInfo
@@ -2613,6 +2619,7 @@ paths:
                                                 example: NA
                                           creditCard:
                                             type: object
+                                            description: Categoria de Bandeiras de Cartões de Crédito.
                                             required:
                                               - network
                                               - additionalInfo
@@ -2638,6 +2645,7 @@ paths:
                                                 description: Texto livre para especificar categoria de bandeira marcada como 'OUTRAS'. Campo deve ser obrigatoriamente preenchido se campo network vier selecionado como 'OUTROS'
                                                 example: NA
                                       rewardsProgram:
+                                        description: Informações sobre programas de recompensa presentes no cartão de crédito.
                                         type: object
                                         required:
                                           - hasRewardProgram
@@ -2853,6 +2861,7 @@ paths:
                                                   maxItems: 4
                                                 minimum:
                                                   type: object
+                                                  description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.
                                                   properties:
                                                     rate:
                                                       type: string
@@ -2862,6 +2871,7 @@ paths:
                                                       example: '0.0456'
                                                 maximum:
                                                   type: object
+                                                  description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência.
                                                   properties:
                                                     rate:
                                                       type: string
@@ -2897,6 +2907,7 @@ paths:
                                             minItems: 1
                                             maxItems: 3
                                       termsConditions:
+                                        description: Informações sobre termos e condições para aquisição e cancelamento.
                                         type: object
                                         required:
                                           - minimumFeeRate
@@ -3125,8 +3136,10 @@ paths:
                                         example: Cartão Vantagens
                                       identification:
                                         $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/identification'
+                                        description: Informações de identificação do cartão de crédito
                                       rewardsProgram:
                                         $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/rewardsProgram'
+                                        description: Informações sobre programas de recompensa presentes no cartão de crédito
                                       fees:
                                         type: object
                                         description: Objeto que reúne informações de tarifas de serviços
@@ -3144,6 +3157,7 @@ paths:
                                         $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/interest'
                                       termsConditions:
                                         $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/termsConditions'
+                                        description: Informações sobre termos e condições para aquisição e cancelamento
                                   minItems: 1
                             minItems: 1
                   links:
@@ -3385,6 +3399,7 @@ paths:
                                                   type: array
                                                   items:
                                                     $ref: '#/paths/~1business-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessAccounts/items/properties/fees/properties/services/items/properties/prices/items'
+                                                    description: Tipo de canal de atendimento.
                                                   minItems: 4
                                                   maxItems: 4
                                                 minimum:
@@ -3738,6 +3753,7 @@ paths:
                                             type: array
                                             items:
                                               $ref: '#/paths/~1personal-financings/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalFinancings/items/properties/fees/properties/services/items'
+                                              description: Lista das Tarifas cobradas sobre Serviços.
                                             minItems: 1
                                         required:
                                           - services
@@ -5133,7 +5149,7 @@ paths:
                                                   properties:
                                                     rate:
                                                       type: string
-                                                      description: Percentual de clientes em cada faixa.
+                                                      description: 'Percentual dos clientes de cada faixa relativa ao serviço ofertado, para pessoa natural informado no período, conforme Res nº32, BCB, 2020.'
                                                       pattern: '^[0-9](\.[0-9]{4})$|^NA$'
                                                       example: '0.1500'
                                                       maxLength: 6

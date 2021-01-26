@@ -2,6 +2,7 @@ type: object
 properties:
   standards:
     type: array
+    description: Relação da disponbilidade de atendimento
     maxItems: 7
     items:
       required:
@@ -29,9 +30,11 @@ properties:
           description: Horário de fechamento (UTC)
   exception:
     type: string
+    description: Em campo texto devem ser registradas todas as Exceções para o não atendimento.
     maxLength: 2000
     pattern: "\\w*\\W*"
     example: Exceto feriados municipais, nacionais e estaduais
   isPublicAccessAllowed:
     type: boolean
+    description: Indica se a instalação do Correspondente Bancário tem acesso restrito a clientes.
     example: false

@@ -5,6 +5,7 @@ required:
 properties:
   product:
     type: object
+    description: Categoria atribuída a um cartão de pagamento, sob uma certa denominação, que lhe agrega um conjunto de vantagens, diferenciando-o de acordo com o perfil do portador
     required:
       - type
       - additionalInfo
@@ -43,6 +44,7 @@ properties:
         example: "NA"
   creditCard:
     type: object
+    description: Categoria de Bandeiras de Cartões de Crédito.
     required:
       - network
       - additionalInfo

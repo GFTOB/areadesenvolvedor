@@ -15,8 +15,10 @@ properties:
     example: "Cartão Vantagens"
   identification:
     $ref: ./CreditCardIdentification.yaml
+    description: Informações de identificação do cartão de crédito
   rewardsProgram:
     $ref: ./CreditCardRewardsProgram.yaml
+    description: Informações sobre programas de recompensa presentes no cartão de crédito
   fees:
     type: object
     description: Objeto que reúne informações de tarifas de serviços
@@ -34,3 +36,4 @@ properties:
     $ref: ./CreditCardInterest.yaml
   termsConditions:
     $ref: ./CreditCardTermsConditions.yaml
+    description: Informações sobre termos e condições para aquisição e cancelamento
