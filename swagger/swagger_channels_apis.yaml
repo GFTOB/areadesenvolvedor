@@ -559,6 +559,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização controladora do grupo de instituições financeiras.
                         required:
                           - name
                           - companies
@@ -572,9 +573,11 @@ paths:
                             type: array
                             items:
                               type: object
+                              description: 'Nome da Instituição, pertencente à Marca, responsável pela Dependência.'
                               required:
                                 - name
                                 - cnpjNumber
+                                - branches
                               properties:
                                 name:
                                   type: string
@@ -591,6 +594,7 @@ paths:
                                   example: '45086338000178'
                                 urlComplementaryList:
                                   type: string
+                                  description: 'URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber. Os contidos nessa lista possuem as mesmas características para produtos e serviços. Endereço eletrônico de acesso ao canal. URLs são limitadas a 2048 caracteres mas, para o contexto do Sistema Financeiro aberto, será adotado a metade deste tamanho.'
                                   maxLength: 1024
                                   pattern: \w*\W*
                                   example: 'https://example.com/mobile-banking'
@@ -607,6 +611,7 @@ paths:
                                     properties:
                                       identification:
                                         type: object
+                                        description: Dados de identificação na dependência.
                                         properties:
                                           type:
                                             type: string
@@ -618,10 +623,10 @@ paths:
                                             description: |
                                               Tipo da dependência, segundo a regulamentação do Bacen,  na Resolução Nº 4072, de 26 de abril de 2012:
                                               Dependência de instituições financeiras e demais instituições, autorizadas a funcionar pelo Banco Central do Brasil, destinada à prática das atividades para as quais a instituição esteja regularmente habilitada.
-                                              * `AGENCIA`: Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória;
-                                              * `POSTO_ATENDIMENTO`: Posto de Atendimento é a dependência subordinada a agência  ou à sede da instituição financeira, destinada ao atendimento ao público no exercício de uma ou mais de suas atividades, podendo ser fixo ou móvel. Segundo Art.15. Os Postos de Atendimento Bancário (PAB), Postos Avançados de Atendimento (PAA), Postos de Atendimento Transitórios (PAT), Postos de Compra de Ouro (PCO), Postos de Atendimento Cooperativo (PAC), Postos de Atendimento de Microcrédito (PAM), Postos Bancários de Arrecadação e Pagamento (PAP) e os Postos de Câmbio atualmente em funcionamento serão considerados PA.
-                                              * `POSTO_ATENDIMENTO_ELETRONICO`: Posto de Atendimento Eletrônico é a dependência constituída por um ou mais terminais de autoatendimento, subordinada a agência ou à sede da instituição, destinada à prestação de serviços por meio eletrônico, podendo ser fixo ou móvel, permanente ou transitório
-                                              * `UNIDADE_ADMINISTRATIVA_DESMEMBRADA `: Unidade Administrativa Desmembrada (UAD) segundo a Resolução 4072 , BCB, 2012, no Art. 8º \"... é dependência destinada à execução de atividades administrativas da instituição, vedado o atendimento ao público\"
+                                               `AGENCIA`: Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória;
+                                               `POSTO_ATENDIMENTO`: Posto de Atendimento é a dependência subordinada a agência  ou à sede da instituição financeira, destinada ao atendimento ao público no exercício de uma ou mais de suas atividades, podendo ser fixo ou móvel. Segundo Art.15. Os Postos de Atendimento Bancário (PAB), Postos Avançados de Atendimento (PAA), Postos de Atendimento Transitórios (PAT), Postos de Compra de Ouro (PCO), Postos de Atendimento Cooperativo (PAC), Postos de Atendimento de Microcrédito (PAM), Postos Bancários de Arrecadação e Pagamento (PAP) e os Postos de Câmbio atualmente em funcionamento serão considerados PA.
+                                               `POSTO_ATENDIMENTO_ELETRONICO`: Posto de Atendimento Eletrônico é a dependência constituída por um ou mais terminais de autoatendimento, subordinada a agência ou à sede da instituição, destinada à prestação de serviços por meio eletrônico, podendo ser fixo ou móvel, permanente ou transitório
+                                               `UNIDADE_ADMINISTRATIVA_DESMEMBRADA `: Unidade Administrativa Desmembrada (UAD) segundo a Resolução 4072 , BCB, 2012, no Art. 8º \"... é dependência destinada à execução de atividades administrativas da instituição, vedado o atendimento ao público\"
                                           code:
                                             type: string
                                             maxLength: 4
@@ -660,6 +665,7 @@ paths:
                                           - name
                                       postalAddress:
                                         type: object
+                                        description: Endereço na dependência.
                                         required:
                                           - address
                                           - districtName
@@ -766,6 +772,7 @@ paths:
                                                 example: '-180.836519'
                                       availability:
                                         type: object
+                                        description: Dias e horários de funcionamento na dependência
                                         properties:
                                           standards:
                                             type: array
@@ -774,6 +781,7 @@ paths:
                                               properties:
                                                 weekday:
                                                   type: string
+                                                  description: Dia da semana de abertura da dependência bancária
                                                   enum:
                                                     - DOMINGO
                                                     - SEGUNDA_FEIRA
@@ -782,15 +790,16 @@ paths:
                                                     - QUINTA_FEIRA
                                                     - SEXTA_FEIRA
                                                     - SABADO
-                                                  description: Dia da semana de abertura da dependência bancária
                                                 openingTime:
-                                                  description: Horário de abertura da dependência bancária (UTC)
                                                   type: string
+                                                  x-cds-type: TimeString
                                                   maxLength: 13
                                                   pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$|^NA$'
                                                   example: '16:00:57Z'
+                                                  description: Horário de abertura da dependência bancária (UTC)
                                                 closingTime:
                                                   type: string
+                                                  x-cds-type: TimeString
                                                   description: Horário de fechamento da dependência bancária (UTC)
                                                   maxLength: 13
                                                   pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$|^NA$'
@@ -821,11 +830,11 @@ paths:
                                           properties:
                                             type:
                                               type: string
+                                              description: Identificação do Tipo de telefone da dependência.
                                               enum:
                                                 - FIXO
                                                 - MOVEL
                                               example: FIXO
-                                              description: 'Identificação do Tipo de telefone da dependência. p.ex.FIXO, MOVEL.'
                                             countryCallingCode:
                                               type: string
                                               maxLength: 4

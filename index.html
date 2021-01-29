@@ -485,6 +485,9 @@
                     <a href="#tocS_BranchAvailability" class="toc-h2 toc-link" data-title="BranchAvailability">BranchAvailability</a>
                   </li>
                   <li>
+                    <a href="#tocS_BranchesGeographicCoordinates" class="toc-h2 toc-link" data-title="BranchesGeographicCoordinates">BranchesGeographicCoordinates</a>
+                  </li>
+                  <li>
                     <a href="#tocS_BranchIdentification" class="toc-h2 toc-link" data-title="BranchIdentification">BranchIdentification</a>
                   </li>
                   <li>
@@ -632,6 +635,18 @@
                     <a href="#tocS_EnumApplicationIntervals" class="toc-h2 toc-link" data-title="EnumApplicationIntervals">EnumApplicationIntervals</a>
                   </li>
                   <li>
+                    <a href="#tocS_EnumBranchIdentificationType" class="toc-h2 toc-link" data-title="EnumBranchIdentificationType">EnumBranchIdentificationType</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumBranchPhoneType" class="toc-h2 toc-link" data-title="EnumBranchPhoneType">EnumBranchPhoneType</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumBranchServicesCodes" class="toc-h2 toc-link" data-title="EnumBranchServicesCodes">EnumBranchServicesCodes</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumBranchServicesNames" class="toc-h2 toc-link" data-title="EnumBranchServicesNames">EnumBranchServicesNames</a>
+                  </li>
+                  <li>
                     <a href="#tocS_EnumOpeningClosingChannels" class="toc-h2 toc-link" data-title="EnumOpeningClosingChannels">EnumOpeningClosingChannels</a>
                   </li>
                   <li>
@@ -651,6 +666,9 @@
                   </li>
                   <li>
                     <a href="#tocS_EnumTransactionMethods" class="toc-h2 toc-link" data-title="EnumTransactionMethods">EnumTransactionMethods</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumWeekDay" class="toc-h2 toc-link" data-title="EnumWeekDay">EnumWeekDay</a>
                   </li>
                   <li>
                     <a href="#tocS_ErrorMetrics" class="toc-h2 toc-link" data-title="ErrorMetrics">ErrorMetrics</a>
@@ -11249,19 +11267,19 @@ This operation does not require authentication
 <td>identification</td>
 <td><a href="#schemabranchidentification">BranchIdentification</a></td>
 <td>true</td>
-<td>none</td>
+<td>Dados de identificação na dependência.</td>
 </tr>
 <tr>
 <td>postalAddress</td>
 <td><a href="#schemabranchpostaladdress">BranchPostalAddress</a></td>
 <td>true</td>
-<td>none</td>
+<td>Endereço na dependência.</td>
 </tr>
 <tr>
 <td>availability</td>
 <td><a href="#schemabranchavailability">BranchAvailability</a></td>
 <td>true</td>
-<td>none</td>
+<td>Dias e horários de funcionamento na dependência</td>
 </tr>
 <tr>
 <td>phones</td>
@@ -11296,7 +11314,12 @@ This operation does not require authentication
   </span><span class="nl">"isPublicAccessAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Dias e horários de funcionamento na dependência</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -11313,7 +11336,7 @@ This operation does not require authentication
 </tr>
 <tr>
 <td>» weekday</td>
-<td>string</td>
+<td><a href="#schemaenumweekday">EnumWeekDay</a></td>
 <td>true</td>
 <td>Dia da semana de abertura da dependência bancária</td>
 </tr>
@@ -11342,40 +11365,44 @@ This operation does not require authentication
 <td>Indica se a instalação da Dependência tem acesso restrito a clientes.</td>
 </tr>
 </tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<h2 id="tocS_BranchesGeographicCoordinates">BranchesGeographicCoordinates</h2>
+
+<p><a id="schemabranchesgeographiccoordinates"></a>
+<a id="schema_BranchesGeographicCoordinates"></a>
+<a id="tocSbranchesgeographiccoordinates"></a>
+<a id="tocsbranchesgeographiccoordinates"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-90.8365180"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Objeto agrupador das informações que compõem as Coordenadas geográficas: latitude e longitude</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
-<th>Código</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>weekday</td>
-<td>DOMINGO</td>
+<td>latitude</td>
+<td>string</td>
+<td>false</td>
+<td>Informação da latitude referente a geolocalização informada.</td>
 </tr>
 <tr>
-<td>weekday</td>
-<td>SEGUNDA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>TERCA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>QUARTA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>QUINTA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>SEXTA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>SABADO</td>
+<td>longitude</td>
+<td>string</td>
+<td>false</td>
+<td>Informação da longitude referente a geolocalização informada.</td>
 </tr>
 </tbody></table>
 
@@ -11385,6 +11412,7 @@ This operation does not require authentication
 <a id="schema_BranchIdentification"></a>
 <a id="tocSbranchidentification"></a>
 <a id="tocsbranchidentification"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AGENCIA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"stri"</span><span class="p">,</span><span class="w">
@@ -11395,7 +11423,12 @@ This operation does not require authentication
   </span><span class="nl">"openingDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Dados de identificação na dependência.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -11406,9 +11439,9 @@ This operation does not require authentication
 </thead><tbody>
 <tr>
 <td>type</td>
-<td>string</td>
+<td><a href="#schemaenumbranchidentificationtype">EnumBranchIdentificationType</a></td>
 <td>true</td>
-<td>Tipo da dependência, segundo a regulamentação do Bacen,  na Resolução Nº 4072, de 26 de abril de 2012:<br>Dependência de instituições financeiras e demais instituições, autorizadas a funcionar pelo Banco Central do Brasil, destinada à prática das atividades para as quais a instituição esteja regularmente habilitada.<br>* <code>AGENCIA</code>: Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória;<br>* <code>POSTO_ATENDIMENTO</code>: Posto de Atendimento é a dependência subordinada a agência  ou à sede da instituição financeira, destinada ao atendimento ao público no exercício de uma ou mais de suas atividades, podendo ser fixo ou móvel. Segundo Art.15. Os Postos de Atendimento Bancário (PAB), Postos Avançados de Atendimento (PAA), Postos de Atendimento Transitórios (PAT), Postos de Compra de Ouro (PCO), Postos de Atendimento Cooperativo (PAC), Postos de Atendimento de Microcrédito (PAM), Postos Bancários de Arrecadação e Pagamento (PAP) e os Postos de Câmbio atualmente em funcionamento serão considerados PA.<br>* <code>POSTO_ATENDIMENTO_ELETRONICO</code>: Posto de Atendimento Eletrônico é a dependência constituída por um ou mais terminais de autoatendimento, subordinada a agência ou à sede da instituição, destinada à prestação de serviços por meio eletrônico, podendo ser fixo ou móvel, permanente ou transitório<br>* <code>UNIDADE_ADMINISTRATIVA_DESMEMBRADA</code>: Unidade Administrativa Desmembrada (UAD) segundo a Resolução 4072 , BCB, 2012, no Art. 8º \&quot;... é dependência destinada à execução de atividades administrativas da instituição, vedado o atendimento ao público\&quot;</td>
+<td>Tipo da dependência, segundo a regulamentação do Bacen,  na Resolução Nº 4072, de 26 de abril de 2012:<br>Dependência de instituições financeiras e demais instituições, autorizadas a funcionar pelo Banco Central do Brasil, destinada à prática das atividades para as quais a instituição esteja regularmente habilitada.<br> <code>AGENCIA</code>: Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória;<br> <code>POSTO_ATENDIMENTO</code>: Posto de Atendimento é a dependência subordinada a agência  ou à sede da instituição financeira, destinada ao atendimento ao público no exercício de uma ou mais de suas atividades, podendo ser fixo ou móvel. Segundo Art.15. Os Postos de Atendimento Bancário (PAB), Postos Avançados de Atendimento (PAA), Postos de Atendimento Transitórios (PAT), Postos de Compra de Ouro (PCO), Postos de Atendimento Cooperativo (PAC), Postos de Atendimento de Microcrédito (PAM), Postos Bancários de Arrecadação e Pagamento (PAP) e os Postos de Câmbio atualmente em funcionamento serão considerados PA.<br> <code>POSTO_ATENDIMENTO_ELETRONICO</code>: Posto de Atendimento Eletrônico é a dependência constituída por um ou mais terminais de autoatendimento, subordinada a agência ou à sede da instituição, destinada à prestação de serviços por meio eletrônico, podendo ser fixo ou móvel, permanente ou transitório<br> <code>UNIDADE_ADMINISTRATIVA_DESMEMBRADA</code>: Unidade Administrativa Desmembrada (UAD) segundo a Resolução 4072 , BCB, 2012, no Art. 8º \&quot;... é dependência destinada à execução de atividades administrativas da instituição, vedado o atendimento ao público\&quot;</td>
 </tr>
 <tr>
 <td>code</td>
@@ -11447,30 +11480,6 @@ This operation does not require authentication
 <td>Data de abertura da dependência (uma string com data conforme especificação RFC-3339. p.ex. 2014-03-19)</td>
 </tr>
 </tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>type</td>
-<td>AGENCIA</td>
-</tr>
-<tr>
-<td>type</td>
-<td>POSTO_ATENDIMENTO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>POSTO_ATENDIMENTO_ELETRONICO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>UNIDADE_ADMINISTRATIVA_DESMEMBRADA</td>
-</tr>
-</tbody></table>
 
 <h2 id="tocS_BranchPhone">BranchPhone</h2>
 
@@ -11478,6 +11487,7 @@ This operation does not require authentication
 <a id="schema_BranchPhone"></a>
 <a id="tocSbranchphone"></a>
 <a id="tocsbranchphone"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
@@ -11496,9 +11506,9 @@ This operation does not require authentication
 </thead><tbody>
 <tr>
 <td>type</td>
-<td>string</td>
+<td><a href="#schemaenumbranchphonetype">EnumBranchPhoneType</a></td>
 <td>true</td>
-<td>Identificação do Tipo de telefone da dependência. p.ex.FIXO, MOVEL.</td>
+<td>Identificação do Tipo de telefone da dependência.</td>
 </tr>
 <tr>
 <td>countryCallingCode</td>
@@ -11517,22 +11527,6 @@ This operation does not require authentication
 <td>string</td>
 <td>false</td>
 <td>Número de telefone da dependência - se houver</td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>type</td>
-<td>FIXO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>MOVEL</td>
 </tr>
 </tbody></table>
 
@@ -11558,7 +11552,12 @@ This operation does not require authentication
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Endereço na dependência.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -11640,7 +11639,9 @@ This operation does not require authentication
 <td>Informação da longitude referente a geolocalização informada.</td>
 </tr>
 </tbody></table>
+
 <h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -11763,6 +11764,7 @@ This operation does not require authentication
 <a id="schema_BranchService"></a>
 <a id="tocSbranchservice"></a>
 <a id="tocsbranchservice"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABERTURA_CONTAS_DEPOSITOS_OU_PAGAMENTO_PRE_PAGA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABRE_CONTA_DEPOSITO_OU_PRE_PAGA"</span><span class="p">,</span><span class="w">
@@ -11780,13 +11782,13 @@ This operation does not require authentication
 </thead><tbody>
 <tr>
 <td>name</td>
-<td>string</td>
+<td><a href="#schemaenumbranchservicesnames">EnumBranchServicesNames</a></td>
 <td>true</td>
 <td>Nome dos Serviços efetivamente prestados pelo Canal de Atendimento</td>
 </tr>
 <tr>
 <td>code</td>
-<td>string</td>
+<td><a href="#schemaenumbranchservicescodes">EnumBranchServicesCodes</a></td>
 <td>true</td>
 <td>Código dos Serviços efetivamente prestados pelo Canal de Atendimento</td>
 </tr>
@@ -11795,174 +11797,6 @@ This operation does not require authentication
 <td>string</td>
 <td>false</td>
 <td>Texto livre para complementar informação relativa ao Serviço disponível, quando for selecionada a opção &#39;OUTROS_PRODUTOS_SERVICOS&#39;</td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>ABERTURA_CONTAS_DEPOSITOS_OU_PAGAMENTO_PRE_PAGA</td>
-</tr>
-<tr>
-<td>name</td>
-<td>SAQUE_MOEDA_EM_ESPECIE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA</td>
-</tr>
-<tr>
-<td>name</td>
-<td>TRANSFERENCIAS_ELETRONICAS_VISANDO_MOVIMENTACAO_CONTAS_DEPOSITOS_OU_PAGAMENTO_TITULARIDADE_CLIENTES</td>
-</tr>
-<tr>
-<td>name</td>
-<td>CONSULTA_SALDOS_EXTRATOS_CONTAS_DEPOSITOS_CONTAS_PAGAMENTOS</td>
-</tr>
-<tr>
-<td>name</td>
-<td>APLICACOES_RESGATES_INVESTIMENTOS</td>
-</tr>
-<tr>
-<td>name</td>
-<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO_SOLICITACAO_CLIENTES_USUARIOS</td>
-</tr>
-<tr>
-<td>name</td>
-<td>DEPOSITOS_MOEDA_ESPECIE_CHEQUE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>OPERACOES_CREDITO_BEM_COMO_OUTROS_SERVICOS_PRESTADOS_ACOMPANHAMENTO_OPERACAO</td>
-</tr>
-<tr>
-<td>name</td>
-<td>CARTAO_CREDITO</td>
-</tr>
-<tr>
-<td>name</td>
-<td>SEGUROS</td>
-</tr>
-<tr>
-<td>name</td>
-<td>OPERACOES_ARRENDAMENTO_MERCANTIL</td>
-</tr>
-<tr>
-<td>name</td>
-<td>ABERTURA_CONTA_PAGAMENTO_POS_PAGA</td>
-</tr>
-<tr>
-<td>name</td>
-<td>COMPRA_VENDA_MOEDA_ESTRANGEIRA_ESPECIE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>COMPRA_VENDA_CHEQUE_CHEQUE_VIAGEM_BEM_COMO_CARGA_MOEDA_ESTRANGEIRA_CARTAO_PRE_PAGO</td>
-</tr>
-<tr>
-<td>name</td>
-<td>COMPRA_VENDA_OURO</td>
-</tr>
-<tr>
-<td>name</td>
-<td>OUTROS_PRODUTOS_SERVICOS</td>
-</tr>
-<tr>
-<td>name</td>
-<td>CANCELAMENTO</td>
-</tr>
-<tr>
-<td>name</td>
-<td>INFORMACOES</td>
-</tr>
-<tr>
-<td>name</td>
-<td>RECLAMACOES</td>
-</tr>
-<tr>
-<td>code</td>
-<td>ABRE_CONTA_DEPOSITO_OU_PRE_PAGA</td>
-</tr>
-<tr>
-<td>code</td>
-<td>SAQUE_MOEDA_ESPECIE</td>
-</tr>
-<tr>
-<td>code</td>
-<td>RECEBE_PAGA_QUALQUER_NATUREZA</td>
-</tr>
-<tr>
-<td>code</td>
-<td>TRANSFERENCIAS_ELETRONICAS_MOVIMENTA_CONTAS_DEPOSITOS_OU_PAGTO_TITULARES_CLIENTES</td>
-</tr>
-<tr>
-<td>code</td>
-<td>CONSULTA_SALDOS_EXTRATOS_CONTAS_DEPOSITOS_PAGTOS</td>
-</tr>
-<tr>
-<td>code</td>
-<td>APLICA_RESGATA_INVESTIMENTOS</td>
-</tr>
-<tr>
-<td>code</td>
-<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGTO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>DEPOSITO_MOEDA_ESPECIE_CHEQUE</td>
-</tr>
-<tr>
-<td>code</td>
-<td>OPERA_CREDITO_OUTROS_SERVICOS_ACOMPANHA_OPERACAO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>CARTAO_CREDITO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>SEGUROS</td>
-</tr>
-<tr>
-<td>code</td>
-<td>OPERA_ARRENDAMENTO_MERCANTIL</td>
-</tr>
-<tr>
-<td>code</td>
-<td>ABERTURA_CONTA_PAGAMENTO_POS_PAGA</td>
-</tr>
-<tr>
-<td>code</td>
-<td>COMPRA_VENDA_MOEDA_ESTRANGEIRA_ESPECIE</td>
-</tr>
-<tr>
-<td>code</td>
-<td>COMPRA_VENDA_CHEQUE_CHEQUE_VIAGEM_CARGA_MOEDA_ESTRANGEIRA_CARTAO_PRE_PAGO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>COMPRA_VENDA_OURO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>OUTROS_PRODUTOS_SERVICOS</td>
-</tr>
-<tr>
-<td>code</td>
-<td>CANCELAMENTO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>INFORMACOES</td>
-</tr>
-<tr>
-<td>code</td>
-<td>RECLAMACOES</td>
 </tr>
 </tbody></table>
 
@@ -12037,7 +11871,12 @@ This operation does not require authentication
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Organização controladora do grupo de instituições financeiras.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -12066,6 +11905,7 @@ This operation does not require authentication
 <a id="schema_BranchesCompany"></a>
 <a id="tocSbranchescompany"></a>
 <a id="tocsbranchescompany"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45086338000178"</span><span class="p">,</span><span class="w">
@@ -12126,7 +11966,12 @@ This operation does not require authentication
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Nome da Instituição, pertencente à Marca, responsável pela Dependência.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -12151,12 +11996,12 @@ This operation does not require authentication
 <td>urlComplementaryList</td>
 <td>string</td>
 <td>false</td>
-<td>none</td>
+<td>URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber. Os contidos nessa lista possuem as mesmas características para produtos e serviços. Endereço eletrônico de acesso ao canal. URLs são limitadas a 2048 caracteres mas, para o contexto do Sistema Financeiro aberto, será adotado a metade deste tamanho.</td>
 </tr>
 <tr>
 <td>branches</td>
 <td>[<a href="#schemabranch">Branch</a>]</td>
-<td>false</td>
+<td>true</td>
 <td>Lista de Dependências de uma Instituição</td>
 </tr>
 </tbody></table>
@@ -12167,6 +12012,7 @@ This operation does not require authentication
 <a id="schema_BusinessAccounts"></a>
 <a id="tocSbusinessaccounts"></a>
 <a id="tocsbusinessaccounts"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONTA_DEPOSITO_A_VISTA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -17518,6 +17364,359 @@ Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#3
 </tr>
 </tbody></table>
 
+<h2 id="tocS_EnumBranchIdentificationType">EnumBranchIdentificationType</h2>
+
+<p><a id="schemaenumbranchidentificationtype"></a>
+<a id="schema_EnumBranchIdentificationType"></a>
+<a id="tocSenumbranchidentificationtype"></a>
+<a id="tocsenumbranchidentificationtype"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"AGENCIA"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Tipo da dependência, segundo a regulamentação do Bacen,  na Resolução Nº 4072, de 26 de abril de 2012:
+Dependência de instituições financeiras e demais instituições, autorizadas a funcionar pelo Banco Central do Brasil, destinada à prática das atividades para as quais a instituição esteja regularmente habilitada.
+ <code>AGENCIA</code>: Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória;
+ <code>POSTO_ATENDIMENTO</code>: Posto de Atendimento é a dependência subordinada a agência  ou à sede da instituição financeira, destinada ao atendimento ao público no exercício de uma ou mais de suas atividades, podendo ser fixo ou móvel. Segundo Art.15. Os Postos de Atendimento Bancário (PAB), Postos Avançados de Atendimento (PAA), Postos de Atendimento Transitórios (PAT), Postos de Compra de Ouro (PCO), Postos de Atendimento Cooperativo (PAC), Postos de Atendimento de Microcrédito (PAM), Postos Bancários de Arrecadação e Pagamento (PAP) e os Postos de Câmbio atualmente em funcionamento serão considerados PA.
+ <code>POSTO_ATENDIMENTO_ELETRONICO</code>: Posto de Atendimento Eletrônico é a dependência constituída por um ou mais terminais de autoatendimento, subordinada a agência ou à sede da instituição, destinada à prestação de serviços por meio eletrônico, podendo ser fixo ou móvel, permanente ou transitório
+ <code>UNIDADE_ADMINISTRATIVA_DESMEMBRADA</code>: Unidade Administrativa Desmembrada (UAD) segundo a Resolução 4072 , BCB, 2012, no Art. 8º \&quot;... é dependência destinada à execução de atividades administrativas da instituição, vedado o atendimento ao público\&quot;</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Tipo da dependência, segundo a regulamentação do Bacen,  na Resolução Nº 4072, de 26 de abril de 2012:<br>Dependência de instituições financeiras e demais instituições, autorizadas a funcionar pelo Banco Central do Brasil, destinada à prática das atividades para as quais a instituição esteja regularmente habilitada.<br> <code>AGENCIA</code>: Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória;<br> <code>POSTO_ATENDIMENTO</code>: Posto de Atendimento é a dependência subordinada a agência  ou à sede da instituição financeira, destinada ao atendimento ao público no exercício de uma ou mais de suas atividades, podendo ser fixo ou móvel. Segundo Art.15. Os Postos de Atendimento Bancário (PAB), Postos Avançados de Atendimento (PAA), Postos de Atendimento Transitórios (PAT), Postos de Compra de Ouro (PCO), Postos de Atendimento Cooperativo (PAC), Postos de Atendimento de Microcrédito (PAM), Postos Bancários de Arrecadação e Pagamento (PAP) e os Postos de Câmbio atualmente em funcionamento serão considerados PA.<br> <code>POSTO_ATENDIMENTO_ELETRONICO</code>: Posto de Atendimento Eletrônico é a dependência constituída por um ou mais terminais de autoatendimento, subordinada a agência ou à sede da instituição, destinada à prestação de serviços por meio eletrônico, podendo ser fixo ou móvel, permanente ou transitório<br> <code>UNIDADE_ADMINISTRATIVA_DESMEMBRADA</code>: Unidade Administrativa Desmembrada (UAD) segundo a Resolução 4072 , BCB, 2012, no Art. 8º \&quot;... é dependência destinada à execução de atividades administrativas da instituição, vedado o atendimento ao público\&quot;</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>AGENCIA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>POSTO_ATENDIMENTO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>POSTO_ATENDIMENTO_ELETRONICO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>UNIDADE_ADMINISTRATIVA_DESMEMBRADA</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumBranchPhoneType">EnumBranchPhoneType</h2>
+
+<p><a id="schemaenumbranchphonetype"></a>
+<a id="schema_EnumBranchPhoneType"></a>
+<a id="tocSenumbranchphonetype"></a>
+<a id="tocsenumbranchphonetype"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"FIXO"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Identificação do Tipo de telefone da dependência.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Identificação do Tipo de telefone da dependência.</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>FIXO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>MOVEL</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumBranchServicesCodes">EnumBranchServicesCodes</h2>
+
+<p><a id="schemaenumbranchservicescodes"></a>
+<a id="schema_EnumBranchServicesCodes"></a>
+<a id="tocSenumbranchservicescodes"></a>
+<a id="tocsenumbranchservicescodes"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"ABRE_CONTA_DEPOSITO_OU_PRE_PAGA"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Código dos Serviços efetivamente prestados pelo Canal de Atendimento</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Código dos Serviços efetivamente prestados pelo Canal de Atendimento</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>ABRE_CONTA_DEPOSITO_OU_PRE_PAGA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>SAQUE_MOEDA_ESPECIE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBE_PAGA_QUALQUER_NATUREZA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>TRANSFERENCIAS_ELETRONICAS_MOVIMENTA_CONTAS_DEPOSITOS_OU_PAGTO_TITULARES_CLIENTES</td>
+</tr>
+<tr>
+<td>**</td>
+<td>CONSULTA_SALDOS_EXTRATOS_CONTAS_DEPOSITOS_PAGTOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>APLICA_RESGATA_INVESTIMENTOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGTO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>DEPOSITO_MOEDA_ESPECIE_CHEQUE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OPERA_CREDITO_OUTROS_SERVICOS_ACOMPANHA_OPERACAO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>CARTAO_CREDITO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>SEGUROS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OPERA_ARRENDAMENTO_MERCANTIL</td>
+</tr>
+<tr>
+<td>**</td>
+<td>ABERTURA_CONTA_PAGAMENTO_POS_PAGA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>COMPRA_VENDA_MOEDA_ESTRANGEIRA_ESPECIE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>COMPRA_VENDA_CHEQUE_CHEQUE_VIAGEM_CARGA_MOEDA_ESTRANGEIRA_CARTAO_PRE_PAGO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>COMPRA_VENDA_OURO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OUTROS_PRODUTOS_SERVICOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>CANCELAMENTO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>INFORMACOES</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECLAMACOES</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumBranchServicesNames">EnumBranchServicesNames</h2>
+
+<p><a id="schemaenumbranchservicesnames"></a>
+<a id="schema_EnumBranchServicesNames"></a>
+<a id="tocSenumbranchservicesnames"></a>
+<a id="tocsenumbranchservicesnames"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"ABERTURA_CONTAS_DEPOSITOS_OU_PAGAMENTO_PRE_PAGA"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Nome dos Serviços efetivamente prestados pelo Canal de Atendimento</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Nome dos Serviços efetivamente prestados pelo Canal de Atendimento</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>ABERTURA_CONTAS_DEPOSITOS_OU_PAGAMENTO_PRE_PAGA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>SAQUE_MOEDA_EM_ESPECIE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>TRANSFERENCIAS_ELETRONICAS_VISANDO_MOVIMENTACAO_CONTAS_DEPOSITOS_OU_PAGAMENTO_TITULARIDADE_CLIENTES</td>
+</tr>
+<tr>
+<td>**</td>
+<td>CONSULTA_SALDOS_EXTRATOS_CONTAS_DEPOSITOS_CONTAS_PAGAMENTOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>APLICACOES_RESGATES_INVESTIMENTOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO_SOLICITACAO_CLIENTES_USUARIOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>DEPOSITOS_MOEDA_ESPECIE_CHEQUE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OPERACOES_CREDITO_BEM_COMO_OUTROS_SERVICOS_PRESTADOS_ACOMPANHAMENTO_OPERACAO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>CARTAO_CREDITO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>SEGUROS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OPERACOES_ARRENDAMENTO_MERCANTIL</td>
+</tr>
+<tr>
+<td>**</td>
+<td>ABERTURA_CONTA_PAGAMENTO_POS_PAGA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>COMPRA_VENDA_MOEDA_ESTRANGEIRA_ESPECIE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>COMPRA_VENDA_CHEQUE_CHEQUE_VIAGEM_BEM_COMO_CARGA_MOEDA_ESTRANGEIRA_CARTAO_PRE_PAGO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>COMPRA_VENDA_OURO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OUTROS_PRODUTOS_SERVICOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>CANCELAMENTO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>INFORMACOES</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECLAMACOES</td>
+</tr>
+</tbody></table>
+
 <h2 id="tocS_EnumOpeningClosingChannels">EnumOpeningClosingChannels</h2>
 
 <p><a id="schemaenumopeningclosingchannels"></a>
@@ -18188,6 +18387,75 @@ Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#3
 <tr>
 <td>**</td>
 <td>MOVIMENTACAO_PRESENCIAL</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumWeekDay">EnumWeekDay</h2>
+
+<p><a id="schemaenumweekday"></a>
+<a id="schema_EnumWeekDay"></a>
+<a id="tocSenumweekday"></a>
+<a id="tocsenumweekday"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"DOMINGO"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Dia da semana de abertura da dependência bancária</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Dia da semana de abertura da dependência bancária</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>DOMINGO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>SEGUNDA_FEIRA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>TERCA_FEIRA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>QUARTA_FEIRA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>QUINTA_FEIRA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>SEXTA_FEIRA</td>
+</tr>
+<tr>
+<td>**</td>
+<td>SABADO</td>
 </tr>
 </tbody></table>
 
@@ -24294,7 +24562,7 @@ Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#3
 <td>» brand</td>
 <td><a href="#schemabranchesbrand">BranchesBrand</a></td>
 <td>true</td>
-<td>none</td>
+<td>Organização controladora do grupo de instituições financeiras.</td>
 </tr>
 <tr>
 <td>links</td>
