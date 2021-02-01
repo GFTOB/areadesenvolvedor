@@ -479,6 +479,12 @@
                     <a href="#tocS_BankingAgentsContractor" class="toc-h2 toc-link" data-title="BankingAgentsContractor">BankingAgentsContractor</a>
                   </li>
                   <li>
+                    <a href="#tocS_BakingAgentsGeographicCoordinates" class="toc-h2 toc-link" data-title="BakingAgentsGeographicCoordinates">BakingAgentsGeographicCoordinates</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_BankingAgentsStandard" class="toc-h2 toc-link" data-title="BankingAgentsStandard">BankingAgentsStandard</a>
+                  </li>
+                  <li>
                     <a href="#tocS_Branch" class="toc-h2 toc-link" data-title="Branch">Branch</a>
                   </li>
                   <li>
@@ -630,6 +636,12 @@
                   </li>
                   <li>
                     <a href="#tocS_EnumApplicationIntervals" class="toc-h2 toc-link" data-title="EnumApplicationIntervals">EnumApplicationIntervals</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumBankingAgentsServicesCode" class="toc-h2 toc-link" data-title="EnumBankingAgentsServicesCode">EnumBankingAgentsServicesCode</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumBankingAgentsServicesName" class="toc-h2 toc-link" data-title="EnumBankingAgentsServicesName">EnumBankingAgentsServicesName</a>
                   </li>
                   <li>
                     <a href="#tocS_EnumBranchIdentificationType" class="toc-h2 toc-link" data-title="EnumBranchIdentificationType">EnumBranchIdentificationType</a>
@@ -10271,21 +10283,21 @@ This operation does not require authentication
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"corporationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"groupName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"isUnderestablishment"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"postalAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av Naburo Ykesaki, 1270"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marília"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -10293,6 +10305,14 @@ This operation does not require authentication
           </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
       </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
@@ -10303,15 +10323,7 @@ This operation does not require authentication
         </span><span class="p">],</span><span class="w">
         </span><span class="nl">"exception"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exceto feriados municipais, nacionais e estaduais"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"isPublicAccessAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -10381,75 +10393,21 @@ This operation does not require authentication
 </thead><tbody>
 <tr>
 <td>standards</td>
-<td>[any]</td>
+<td>[<a href="#schemabankingagentsstandard">BankingAgentsStandard</a>]</td>
 <td>false</td>
-<td></td>
-</tr>
-<tr>
-<td>» weekday</td>
-<td>string</td>
-<td>true</td>
-<td>Dia da semana de abertura</td>
-</tr>
-<tr>
-<td>» openingTime</td>
-<td>string</td>
-<td>false</td>
-<td>Horário de abertura (UTC)</td>
-</tr>
-<tr>
-<td>» closingTime</td>
-<td>string</td>
-<td>false</td>
-<td>Horário de fechamento (UTC)</td>
+<td>[Relação da disponbilidade de atendimento]</td>
 </tr>
 <tr>
 <td>exception</td>
 <td>string</td>
 <td>false</td>
-<td></td>
+<td>Em campo texto devem ser registradas todas as Exceções para o não atendimento.</td>
 </tr>
 <tr>
 <td>isPublicAccessAllowed</td>
 <td>boolean</td>
 <td>false</td>
-<td></td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>weekday</td>
-<td>DOMINGO</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>SEGUNDA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>TERCA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>QUARTA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>QUINTA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>SEXTA_FEIRA</td>
-</tr>
-<tr>
-<td>weekday</td>
-<td>SABADO</td>
+<td>Indica se a instalação do Correspondente Bancário tem acesso restrito a clientes.</td>
 </tr>
 </tbody></table>
 
@@ -10460,9 +10418,9 @@ This operation does not require authentication
 <a id="tocSbankingagentidentification"></a>
 <a id="tocsbankingagentidentification"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"corporationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"groupName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"isUnderestablishment"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
@@ -10476,22 +10434,22 @@ This operation does not require authentication
 </tr>
 </thead><tbody>
 <tr>
-<td>cnpjNumber</td>
-<td>string</td>
-<td>true</td>
-<td>Número completo do CNPJ da instituição</td>
-</tr>
-<tr>
 <td>corporationName</td>
 <td>string</td>
 <td>true</td>
-<td></td>
+<td>Nome do Correspondente Bancário.</td>
 </tr>
 <tr>
 <td>groupName</td>
 <td>string</td>
 <td>false</td>
-<td></td>
+<td>Nome do conglomerado ao qual pertence o agente bancário.</td>
+</tr>
+<tr>
+<td>cnpjNumber</td>
+<td>string</td>
+<td>true</td>
+<td>Número completo do CNPJ da instituição</td>
 </tr>
 <tr>
 <td>isUnderestablishment</td>
@@ -10510,12 +10468,12 @@ This operation does not require authentication
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"postalAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av Naburo Ykesaki, 1270"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marília"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -10523,6 +10481,14 @@ This operation does not require authentication
       </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
   </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
@@ -10533,15 +10499,7 @@ This operation does not require authentication
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"exception"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exceto feriados municipais, nacionais e estaduais"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"isPublicAccessAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
@@ -10557,17 +10515,17 @@ This operation does not require authentication
 <td>postalAddress</td>
 <td><a href="#schemabankingagentpostaladdress">BankingAgentPostalAddress</a></td>
 <td>true</td>
-<td></td>
-</tr>
-<tr>
-<td>availability</td>
-<td><a href="#schemabankingagentavailability">BankingAgentAvailability</a></td>
-<td>false</td>
-<td></td>
+<td>Endereço do correspondente.</td>
 </tr>
 <tr>
 <td>phones</td>
 <td>[<a href="#schemaphone">Phone</a>]</td>
+<td>false</td>
+<td>Lista de telefones do correspondente.</td>
+</tr>
+<tr>
+<td>availability</td>
+<td><a href="#schemabankingagentavailability">BankingAgentAvailability</a></td>
 <td>false</td>
 <td></td>
 </tr>
@@ -10581,12 +10539,12 @@ This operation does not require authentication
 <a id="tocsbankingagentpostaladdress"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av Naburo Ykesaki, 1270"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marília"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -10595,7 +10553,12 @@ This operation does not require authentication
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Endereço do correspondente.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -10611,12 +10574,6 @@ This operation does not require authentication
 <td>Deverá trazer toda a informação referente ao endereço da dependência informada: Tipo de logradouro + Nome do logradouro + Número do Logradouro (se não existir usar &#39; s/n&#39;) + complemento (se houver), como, p.ex.: &#39;R Diamatina, 59, bloco 35, fundos&#39; &#39;Praça da Boa Vontade s/n&#39;</td>
 </tr>
 <tr>
-<td>additionalInfo</td>
-<td>string</td>
-<td>false</td>
-<td>Alguns logradouros ainda necessitam ser especificados por meio de complemento</td>
-</tr>
-<tr>
 <td>districtName</td>
 <td>string</td>
 <td>true</td>
@@ -10629,12 +10586,6 @@ This operation does not require authentication
 <td>Localidade: O nome da localidade corresponde à designação da cidade ou município no qual o endereço está localizado. p.ex. &#39;São Paulo&#39;</td>
 </tr>
 <tr>
-<td>ibgeCode</td>
-<td>string</td>
-<td>false</td>
-<td>Código IBGE do município</td>
-</tr>
-<tr>
 <td>countrySubDivision</td>
 <td>string</td>
 <td>true</td>
@@ -10645,6 +10596,18 @@ This operation does not require authentication
 <td>string</td>
 <td>true</td>
 <td>Código de Endereçamento Postal</td>
+</tr>
+<tr>
+<td>additionalInfo</td>
+<td>string</td>
+<td>false</td>
+<td>Alguns logradouros ainda necessitam ser especificados por meio de complemento</td>
+</tr>
+<tr>
+<td>ibgeCode</td>
+<td>string</td>
+<td>false</td>
+<td>Código IBGE do município</td>
 </tr>
 <tr>
 <td>country</td>
@@ -10660,24 +10623,14 @@ This operation does not require authentication
 </tr>
 <tr>
 <td>geographicCoordinates</td>
-<td>object</td>
+<td><a href="#schemabakingagentsgeographiccoordinates">BakingAgentsGeographicCoordinates</a></td>
 <td>false</td>
 <td>Objeto agrupador das informações que compõem as Coordenadas geográficas: latitude e longitude</td>
 </tr>
-<tr>
-<td>» latitude</td>
-<td>string</td>
-<td>false</td>
-<td>Informação da latitude referente a geolocalização informada.</td>
-</tr>
-<tr>
-<td>» longitude</td>
-<td>string</td>
-<td>false</td>
-<td>Informação da longitude referente a geolocalização informada.</td>
-</tr>
 </tbody></table>
+
 <h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -10800,6 +10753,7 @@ This operation does not require authentication
 <a id="schema_BankingAgentService"></a>
 <a id="tocSbankingagentservice"></a>
 <a id="tocsbankingagentservice"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_ABERTURA_CONTAS_DEPOSITOS_VISTA_PRAZO_POUPANCA_MANTIDOS_INSTITUICAO_CONTRATANTE"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS"</span><span class="p">,</span><span class="w">
@@ -10822,103 +10776,21 @@ This operation does not require authentication
 </thead><tbody>
 <tr>
 <td>name</td>
-<td>string</td>
+<td><a href="#schemaenumbankingagentsservicesname">EnumBankingAgentsServicesName</a></td>
 <td>true</td>
 <td>Relação dos Nomes de serviços prestados pelo Correspondente</td>
 </tr>
 <tr>
 <td>code</td>
-<td>string</td>
+<td><a href="#schemaenumbankingagentsservicescode">EnumBankingAgentsServicesCode</a></td>
 <td>true</td>
-<td>Relação dos Códigos relativos aos serviços prestados pelo Correspondente<br>* <code>RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS</code> - Recepção e encaminhamento de propostas de abertura de contas<br>* <code>REALIZA_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS</code> - Realização de recebimentos, pagamentos e transferências eletrônicas<br>* <code>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_EXECUCAO_CONTRATOS_CONVENIO</code> - Recebimentos e pagamentos de qualquer natureza<br>* <code>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO</code> - Execução ativa e passiva de ordens de pagamento<br>* <code>RECEBE_ENCAMINHA_PROPOSTAS_CREDITO_ARRENDAMENTO_MERCANTIL</code> - Recepção e encaminhamento de propostas de operações de crédito e de arrendamento mercantil<br>* <code>RECEBE_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO</code> - Recebimento e pagamentos relacionados a letras de câmbio de aceite da instituição<br>* <code>RECEBE_ENCAMINHA_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO</code> - Recepção e encaminhamento de propostas de fornecimento de cartões de crédito<br>* <code>REALIZA_OPERACOES_CAMBIO</code> - Realização de operações de câmbio<br>* <code>OUTROS</code> - Outros</td>
+<td>Relação dos Códigos relativos aos serviços prestados pelo Correspondente<br> <code>RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS</code> - Recepção e encaminhamento de propostas de abertura de contas<br> <code>REALIZA_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS</code> - Realização de recebimentos, pagamentos e transferências eletrônicas<br> <code>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_EXECUCAO_CONTRATOS_CONVENIO</code> - Recebimentos e pagamentos de qualquer natureza<br> <code>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO</code> - Execução ativa e passiva de ordens de pagamento<br> <code>RECEBE_ENCAMINHA_PROPOSTAS_CREDITO_ARRENDAMENTO_MERCANTIL</code> - Recepção e encaminhamento de propostas de operações de crédito e de arrendamento mercantil<br> <code>RECEBE_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO</code> - Recebimento e pagamentos relacionados a letras de câmbio de aceite da instituição<br> <code>RECEBE_ENCAMINHA_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO</code> - Recepção e encaminhamento de propostas de fornecimento de cartões de crédito<br> <code>REALIZA_OPERACOES_CAMBIO</code> - Realização de operações de câmbio<br> <code>OUTROS</code> - Outros</td>
 </tr>
 <tr>
 <td>additionalInfo</td>
 <td>string</td>
 <td>false</td>
 <td>Campo aberto para detalhamento</td>
-</tr>
-</tbody></table>
-
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_ABERTURA_CONTAS_DEPOSITOS_VISTA_PRAZO_POUPANCA_MANTIDOS_INSTITUICAO_CONTRATANTE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>REALIZACAO_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS_VISANDO_MOVIMENTACAO_CONTAS_DEPOSITOS_TITULARIDADE_CLIENTES_MANTIDAS_INSTITUICAO_CONTRATANTE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_OUTRAS_ATIVIDADES_DECORRENTES_EXECUCAO_CONTRATOS_CONVENIOS_PRESTACAO_SERVICOS</td>
-</tr>
-<tr>
-<td>name</td>
-<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO_CURSADAS_INTERMEDIO_INSTITUICAO_CONTRATANTE_SOLICITACAO_CLIENTES_USUARIOS</td>
-</tr>
-<tr>
-<td>name</td>
-<td>RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_OPERACAO_CREDITO_ARRENDAMENTO_MERCANTIL_CONCESSAO_INSTITUICAO_CONTRATANTE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>RECEBIMENTOS_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO_CONTRATANTE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO_RESPONSABILIDADE_INSTITUICAO_CONTRATANTE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>REALIZACAO_OPERACOES_CAMBIO_RESPONSABILIDADE_INSTITUICAO_CONTRATANTE</td>
-</tr>
-<tr>
-<td>name</td>
-<td>OUTROS</td>
-</tr>
-<tr>
-<td>code</td>
-<td>RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS</td>
-</tr>
-<tr>
-<td>code</td>
-<td>REALIZA_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS</td>
-</tr>
-<tr>
-<td>code</td>
-<td>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_EXECUCAO_CONTRATOS_CONVENIO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>RECEBE_ENCAMINHA_PROPOSTAS_CREDITO_ARRENDAMENTO_MERCANTIL</td>
-</tr>
-<tr>
-<td>code</td>
-<td>RECEBE_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>RECEBE_ENCAMINHA_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>REALIZA_OPERACOES_CAMBIO</td>
-</tr>
-<tr>
-<td>code</td>
-<td>OUTROS</td>
 </tr>
 </tbody></table>
 
@@ -10942,33 +10814,33 @@ This operation does not require authentication
           </span><span class="nl">"bankingAgents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"corporationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"groupName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"isUnderestablishment"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
               </span><span class="p">},</span><span class="w">
               </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                   </span><span class="nl">"postalAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av Naburo Ykesaki, 1270"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marília"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
                   </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{}</span><span class="w">
+                  </span><span class="p">],</span><span class="w">
                   </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
                     </span><span class="nl">"exception"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exceto feriados municipais, nacionais e estaduais"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"isPublicAccessAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-                  </span><span class="p">},</span><span class="w">
-                  </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{}</span><span class="w">
-                  </span><span class="p">]</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
                 </span><span class="p">}</span><span class="w">
               </span><span class="p">],</span><span class="w">
               </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -11025,21 +10897,21 @@ This operation does not require authentication
       </span><span class="nl">"bankingAgents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"corporationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"groupName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"isUnderestablishment"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
           </span><span class="p">},</span><span class="w">
           </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="nl">"postalAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av Naburo Ykesaki, 1270"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marília"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -11047,6 +10919,14 @@ This operation does not require authentication
                   </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
                 </span><span class="p">}</span><span class="w">
               </span><span class="p">},</span><span class="w">
+              </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+              </span><span class="p">],</span><span class="w">
               </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                   </span><span class="p">{</span><span class="w">
@@ -11057,15 +10937,7 @@ This operation does not require authentication
                 </span><span class="p">],</span><span class="w">
                 </span><span class="nl">"exception"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exceto feriados municipais, nacionais e estaduais"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"isPublicAccessAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-              </span><span class="p">},</span><span class="w">
-              </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="p">{</span><span class="w">
-                  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
-                  </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
-                  </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
-                  </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
-                </span><span class="p">}</span><span class="w">
-              </span><span class="p">]</span><span class="w">
+              </span><span class="p">}</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">],</span><span class="w">
           </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -11122,21 +10994,21 @@ This operation does not require authentication
   </span><span class="nl">"bankingAgents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"corporationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"groupName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"isUnderestablishment"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"postalAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av Naburo Ykesaki, 1270"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marília"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3550308"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -11144,6 +11016,14 @@ This operation does not require authentication
               </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
           </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="p">{</span><span class="w">
@@ -11154,15 +11034,7 @@ This operation does not require authentication
             </span><span class="p">],</span><span class="w">
             </span><span class="nl">"exception"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exceto feriados municipais, nacionais e estaduais"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"isPublicAccessAllowed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="nl">"phones"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIXO"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"countryCallingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"areaCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35721199"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">],</span><span class="w">
       </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -11189,7 +11061,7 @@ This operation does not require authentication
 <td>name</td>
 <td>string</td>
 <td>true</td>
-<td></td>
+<td>Nome do contratante do serviço do correspondente.</td>
 </tr>
 <tr>
 <td>cnpjNumber</td>
@@ -11201,7 +11073,93 @@ This operation does not require authentication
 <td>bankingAgents</td>
 <td>[<a href="#schemabankingagent">BankingAgent</a>]</td>
 <td>false</td>
-<td></td>
+<td>Lista de correspondentes bancários.</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_BakingAgentsGeographicCoordinates">BakingAgentsGeographicCoordinates</h2>
+
+<p><a id="schemabakingagentsgeographiccoordinates"></a>
+<a id="schema_BakingAgentsGeographicCoordinates"></a>
+<a id="tocSbakingagentsgeographiccoordinates"></a>
+<a id="tocsbakingagentsgeographiccoordinates"></a></p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-90.8365180"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Objeto agrupador das informações que compõem as Coordenadas geográficas: latitude e longitude</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>latitude</td>
+<td>string</td>
+<td>false</td>
+<td>Informação da latitude referente a geolocalização informada.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>string</td>
+<td>false</td>
+<td>Informação da longitude referente a geolocalização informada.</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_BankingAgentsStandard">BankingAgentsStandard</h2>
+
+<p><a id="schemabankingagentsstandard"></a>
+<a id="schema_BankingAgentsStandard"></a>
+<a id="tocSbankingagentsstandard"></a>
+<a id="tocsbankingagentsstandard"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"weekday"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOMINGO"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"openingTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:20:30Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"closingTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:20:30Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Relação da disponbilidade de atendimento</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>weekday</td>
+<td><a href="#schemaenumweekday">EnumWeekDay</a></td>
+<td>true</td>
+<td>Dia da semana de abertura</td>
+</tr>
+<tr>
+<td>openingTime</td>
+<td>string</td>
+<td>false</td>
+<td>Horário padrão de início de atendimento pelo Correspondente Bancário.</td>
+</tr>
+<tr>
+<td>closingTime</td>
+<td>string</td>
+<td>false</td>
+<td>Horário padrão de encerramento de atendimento pelo Correspondente Bancário.</td>
 </tr>
 </tbody></table>
 
@@ -11211,6 +11169,7 @@ This operation does not require authentication
 <a id="schema_Branch"></a>
 <a id="tocSbranch"></a>
 <a id="tocsbranch"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AGENCIA"</span><span class="p">,</span><span class="w">
@@ -11353,7 +11312,7 @@ This operation does not require authentication
 <td>» weekday</td>
 <td><a href="#schemaenumweekday">EnumWeekDay</a></td>
 <td>true</td>
-<td>Dia da semana de abertura da dependência bancária</td>
+<td>Dia da semana de abertura</td>
 </tr>
 <tr>
 <td>» openingTime</td>
@@ -17154,6 +17113,169 @@ Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#3
 </tr>
 </tbody></table>
 
+<h2 id="tocS_EnumBankingAgentsServicesCode">EnumBankingAgentsServicesCode</h2>
+
+<p><a id="schemaenumbankingagentsservicescode"></a>
+<a id="schema_EnumBankingAgentsServicesCode"></a>
+<a id="tocSenumbankingagentsservicescode"></a>
+<a id="tocsenumbankingagentsservicescode"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Relação dos Códigos relativos aos serviços prestados pelo Correspondente
+ <code>RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS</code> - Recepção e encaminhamento de propostas de abertura de contas
+ <code>REALIZA_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS</code> - Realização de recebimentos, pagamentos e transferências eletrônicas
+ <code>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_EXECUCAO_CONTRATOS_CONVENIO</code> - Recebimentos e pagamentos de qualquer natureza
+ <code>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO</code> - Execução ativa e passiva de ordens de pagamento
+ <code>RECEBE_ENCAMINHA_PROPOSTAS_CREDITO_ARRENDAMENTO_MERCANTIL</code> - Recepção e encaminhamento de propostas de operações de crédito e de arrendamento mercantil
+ <code>RECEBE_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO</code> - Recebimento e pagamentos relacionados a letras de câmbio de aceite da instituição
+ <code>RECEBE_ENCAMINHA_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO</code> - Recepção e encaminhamento de propostas de fornecimento de cartões de crédito
+ <code>REALIZA_OPERACOES_CAMBIO</code> - Realização de operações de câmbio
+ <code>OUTROS</code> - Outros</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Relação dos Códigos relativos aos serviços prestados pelo Correspondente<br> <code>RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS</code> - Recepção e encaminhamento de propostas de abertura de contas<br> <code>REALIZA_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS</code> - Realização de recebimentos, pagamentos e transferências eletrônicas<br> <code>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_EXECUCAO_CONTRATOS_CONVENIO</code> - Recebimentos e pagamentos de qualquer natureza<br> <code>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO</code> - Execução ativa e passiva de ordens de pagamento<br> <code>RECEBE_ENCAMINHA_PROPOSTAS_CREDITO_ARRENDAMENTO_MERCANTIL</code> - Recepção e encaminhamento de propostas de operações de crédito e de arrendamento mercantil<br> <code>RECEBE_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO</code> - Recebimento e pagamentos relacionados a letras de câmbio de aceite da instituição<br> <code>RECEBE_ENCAMINHA_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO</code> - Recepção e encaminhamento de propostas de fornecimento de cartões de crédito<br> <code>REALIZA_OPERACOES_CAMBIO</code> - Realização de operações de câmbio<br> <code>OUTROS</code> - Outros</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>RECEBE_ENCAMINHA_PROPOSTAS_ABERTURA_CONTAS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>REALIZA_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_EXECUCAO_CONTRATOS_CONVENIO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBE_ENCAMINHA_PROPOSTAS_CREDITO_ARRENDAMENTO_MERCANTIL</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBE_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBE_ENCAMINHA_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>REALIZA_OPERACOES_CAMBIO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OUTROS</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumBankingAgentsServicesName">EnumBankingAgentsServicesName</h2>
+
+<p><a id="schemaenumbankingagentsservicesname"></a>
+<a id="schema_EnumBankingAgentsServicesName"></a>
+<a id="tocSenumbankingagentsservicesname"></a>
+<a id="tocsenumbankingagentsservicesname"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_ABERTURA_CONTAS_DEPOSITOS_VISTA_PRAZO_POUPANCA_MANTIDOS_INSTITUICAO_CONTRATANTE"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Relação dos Nomes de serviços prestados pelo Correspondente</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Relação dos Nomes de serviços prestados pelo Correspondente</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_ABERTURA_CONTAS_DEPOSITOS_VISTA_PRAZO_POUPANCA_MANTIDOS_INSTITUICAO_CONTRATANTE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>REALIZACAO_RECEBIMENTOS_PAGAMENTOS_TRANSFERENCIAS_ELETRONICAS_VISANDO_MOVIMENTACAO_CONTAS_DEPOSITOS_TITULARIDADE_CLIENTES_MANTIDAS_INSTITUICAO_CONTRATANTE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA_OUTRAS_ATIVIDADES_DECORRENTES_EXECUCAO_CONTRATOS_CONVENIOS_PRESTACAO_SERVICOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO_CURSADAS_INTERMEDIO_INSTITUICAO_CONTRATANTE_SOLICITACAO_CLIENTES_USUARIOS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_OPERACAO_CREDITO_ARRENDAMENTO_MERCANTIL_CONCESSAO_INSTITUICAO_CONTRATANTE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEBIMENTOS_PAGAMENTOS_RELACIONADOS_LETRAS_CAMBIO_ACEITE_INSTITUICAO_CONTRATANTE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>RECEPCAO_ENCAMINHAMENTO_PROPOSTAS_FORNECIMENTO_CARTAO_CREDITO_RESPONSABILIDADE_INSTITUICAO_CONTRATANTE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>REALIZACAO_OPERACOES_CAMBIO_RESPONSABILIDADE_INSTITUICAO_CONTRATANTE</td>
+</tr>
+<tr>
+<td>**</td>
+<td>OUTROS</td>
+</tr>
+</tbody></table>
+
 <h2 id="tocS_EnumBranchIdentificationType">EnumBranchIdentificationType</h2>
 
 <p><a id="schemaenumbranchidentificationtype"></a>
@@ -18801,7 +18923,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 
 </span></code></pre></div>
 
-<p>Dia da semana de abertura da dependência bancária</p>
+<p>Dia da semana de abertura</p>
 
 <h3 id='schemas-metricas-propriedades'>Propriedades</h3>
 
@@ -18817,7 +18939,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>**</td>
 <td>string</td>
 <td>false</td>
-<td>Dia da semana de abertura da dependência bancária</td>
+<td>Dia da semana de abertura</td>
 </tr>
 </tbody></table>
 
