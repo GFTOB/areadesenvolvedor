@@ -41,6 +41,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização controladora do grupo de instituições financeiras.
                         required:
                           - name
                           - companies
@@ -102,6 +103,7 @@ paths:
                                           properties:
                                             identification:
                                               type: object
+                                              description: Dados de identificação do correspondente.
                                               properties:
                                                 corporationName:
                                                   type: string
@@ -288,12 +290,14 @@ paths:
                                                               type: string
                                                               maxLength: 13
                                                               pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$'
+                                                              format: TimeString
                                                               example: '10:20:30Z'
                                                               description: Horário padrão de início de atendimento pelo Correspondente Bancário.
                                                             closingTime:
                                                               type: string
                                                               maxLength: 13
                                                               pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$'
+                                                              format: TimeString
                                                               example: '10:20:30Z'
                                                               description: Horário padrão de encerramento de atendimento pelo Correspondente Bancário.
                                                       exception:
@@ -354,7 +358,7 @@ paths:
                                                     type: string
                                                     maxLength: 2000
                                                     pattern: \w*\W*
-                                                    description: Campo aberto para detalhamento
+                                                    description: Detalhes adicionais sobre os serviços prestados.
                                                 required:
                                                   - name
                                                   - code
@@ -596,6 +600,7 @@ paths:
                                   description: 'URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber. Os contidos nessa lista possuem as mesmas características para produtos e serviços. Endereço eletrônico de acesso ao canal. URLs são limitadas a 2048 caracteres mas, para o contexto do Sistema Financeiro aberto, será adotado a metade deste tamanho.'
                                   maxLength: 1024
                                   pattern: \w*\W*
+                                  format: URIString
                                   example: 'https://example.com/mobile-banking'
                                 branches:
                                   type: array
@@ -791,14 +796,14 @@ paths:
                                                     - SABADO
                                                 openingTime:
                                                   type: string
-                                                  x-cds-type: TimeString
+                                                  format: TimeString
                                                   maxLength: 13
                                                   pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$|^NA$'
                                                   example: '16:00:57Z'
                                                   description: Horário de abertura da dependência bancária (UTC)
                                                 closingTime:
                                                   type: string
-                                                  x-cds-type: TimeString
+                                                  format: TimeString
                                                   description: Horário de fechamento da dependência bancária (UTC)
                                                   maxLength: 13
                                                   pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$|^NA$'
@@ -929,25 +934,25 @@ paths:
                     properties:
                       self:
                         type: string
-                        x-cds-type: URIString
+                        format: URIString
                         description: URI completo que gerou a resposta atual.
                         example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
                       first:
                         type: string
-                        x-cds-type: URIString
+                        format: URIString
                         description: URI da primeira página que originou essa lista de resultados. Restrição - Obrigatório quando não for a primeira página da resposta
                         example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
                       prev:
                         type: string
-                        x-cds-type: URIString
+                        format: URIString
                         description: "URI da página anterior dessa lista de resultados. Restrição - \tObrigatório quando não for a primeira página da resposta"
                       next:
                         type: string
-                        x-cds-type: URIString
+                        format: URIString
                         description: URI da próxima página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
                       last:
                         type: string
-                        x-cds-type: URIString
+                        format: URIString
                         description: URI da última página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
                         example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
                   meta:
@@ -1068,6 +1073,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização controladora do grupo de instituições financeiras.
                         required:
                           - name
                           - companies
@@ -1104,6 +1110,7 @@ paths:
                                   description: URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber.
                                   maxLength: 1024
                                   pattern: \w*\W*
+                                  format: URIString
                                   example: 'https://example.com/mobile-banking'
                                 electronicChannels:
                                   type: array
@@ -1304,6 +1311,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização controladora do grupo de instituições financeiras.
                         required:
                           - name
                           - companies
@@ -1338,6 +1346,7 @@ paths:
                                 urlComplementaryList:
                                   type: string
                                   pattern: \w*\W*
+                                  format: URIString
                                   maxLength: 1024
                                   example: 'https://example.com/mobile-banking'
                                   description: URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber.
@@ -1603,6 +1612,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização controladora do grupo de instituições financeiras.
                         properties:
                           name:
                             type: string
@@ -1711,22 +1721,7 @@ paths:
                                             description: Código do pais de acordo com o código “alpha3” do ISO-3166.
                                             example: BRA
                                           geographicCoordinates:
-                                            type: object
-                                            description: |
-                                              Objeto agrupador das informações que compõem as Coordenadas geográficas: latitude e longitude
-                                            properties:
-                                              latitude:
-                                                description: Informação da latitude referente a geolocalização informada.
-                                                type: string
-                                                pattern: '^-?\d{1,2}\.\d{1,9}$'
-                                                maxLength: 13
-                                                example: '-90.8365180'
-                                              longitude:
-                                                description: Informação da longitude referente a geolocalização informada.
-                                                type: string
-                                                pattern: '^-?\d{1,3}\.\d{1,8}$'
-                                                maxLength: 13
-                                                example: '-180.836519'
+                                            $ref: '#/paths/~1branches/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/branches/items/properties/postalAddress/properties/geographicCoordinates'
                                       availability:
                                         type: object
                                         properties:
@@ -1743,12 +1738,14 @@ paths:
                                                   description: Horário de abertura (UTC)
                                                   maxLength: 13
                                                   pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$|^NA$'
+                                                  format: TimeString
                                                   example: '16:00:57Z'
                                                 closingTime:
                                                   type: string
                                                   description: Horário de fechamento (UTC)
                                                   maxLength: 13
                                                   pattern: '^(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)Z$|^NA$'
+                                                  format: TimeString
                                                   example: '16:00:57Z'
                                           exception:
                                             type: string
@@ -1842,6 +1839,7 @@ paths:
                                 urlComplementaryList:
                                   type: string
                                   pattern: \w*\W*
+                                  format: URIString
                                   maxLength: 1024
                                   description: |
                                     URL de link para lista complementar com os nomes e CNPJs agrupados para o caso instituições ofertantes de produtos e serviços com as mesmas características.
