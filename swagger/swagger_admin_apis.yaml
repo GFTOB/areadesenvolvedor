@@ -33,17 +33,17 @@ paths:
             default: 25
             minimum: 1
         - in: query
+          description: 'O período a ser retornado. Se não for informado, o padrão será ALL'
           name: period
           schema:
             type: string
             enum:
               - CURRENT
               - ALL
-          required: false
-          description: |
-            Período a ser consultado
-              * `CURRENT` - Métricas do dia atual.
-              * `ALL` - Métricas de todo o período disponível.
+            description: |
+              Período a ser consultado
+                 `CURRENT` - Métricas do dia atual.
+                 `ALL` - Métricas de todo o período disponível.
       responses:
         '200':
           description: Dados das métricas

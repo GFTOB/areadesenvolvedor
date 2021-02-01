@@ -638,6 +638,9 @@
                     <a href="#tocS_EnumAccountType" class="toc-h2 toc-link" data-title="EnumAccountType">EnumAccountType</a>
                   </li>
                   <li>
+                    <a href="#tocS_EnumAdminMetricsPeriod" class="toc-h2 toc-link" data-title="EnumAdminMetricsPeriod">EnumAdminMetricsPeriod</a>
+                  </li>
+                  <li>
                     <a href="#tocS_EnumApplicationIntervals" class="toc-h2 toc-link" data-title="EnumApplicationIntervals">EnumApplicationIntervals</a>
                   </li>
                   <li>
@@ -9370,13 +9373,6 @@ This operation does not require authentication
 </tr>
 </thead><tbody>
 <tr>
-<td>period</td>
-<td>query</td>
-<td>string</td>
-<td>false</td>
-<td>Período a ser consultado</td>
-</tr>
-<tr>
 <td>page</td>
 <td>query</td>
 <td>integer</td>
@@ -9390,13 +9386,14 @@ This operation does not require authentication
 <td>false</td>
 <td>Quantidade total de registros por páginas.</td>
 </tr>
+<tr>
+<td>period</td>
+<td>query</td>
+<td><a href="#schemaenumadminmetricsperiod">EnumAdminMetricsPeriod</a></td>
+<td>false</td>
+<td>O período a ser retornado. Se não for informado, o padrão será ALL</td>
+</tr>
 </tbody></table>
-
-<h4 id='apis-diretorio-e-service-desk-metricas-especificacao-em-oas-3-0-detailed-descriptions'>Detailed descriptions</h4>
-
-<p><strong>period</strong>: Período a ser consultado
-  * <code>CURRENT</code> - Métricas do dia atual.
-  * <code>ALL</code> - Métricas de todo o período disponível.</p>
 
 <h4 id='apis-diretorio-e-service-desk-metricas-especificacao-em-oas-3-0-enumerated-values'>Enumerated Values</h4>
 
@@ -16860,6 +16857,57 @@ Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#3
 <tr>
 <td>**</td>
 <td>CONTA_PAGAMENTO_PRE_PAGA</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumAdminMetricsPeriod">EnumAdminMetricsPeriod</h2>
+
+<p><a id="schemaenumadminmetricsperiod"></a>
+<a id="schema_EnumAdminMetricsPeriod"></a>
+<a id="tocSenumadminmetricsperiod"></a>
+<a id="tocsenumadminmetricsperiod"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"CURRENT"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Período a ser consultado
+   <code>CURRENT</code> - Métricas do dia atual.
+   <code>ALL</code> - Métricas de todo o período disponível.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Período a ser consultado<br>   <code>CURRENT</code> - Métricas do dia atual.<br>   <code>ALL</code> - Métricas de todo o período disponível.</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>CURRENT</td>
+</tr>
+<tr>
+<td>**</td>
+<td>ALL</td>
 </tr>
 </tbody></table>
 

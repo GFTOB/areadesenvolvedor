@@ -765,20 +765,9 @@ paths:
         <a href="swagger/swagger_admin_apis.yaml">Download da Especificação (OAS 3.0)</a>
       operationId: getMetrics
       parameters:
-        - in: query
-          name: period
-          schema:
-            type: string
-            enum:
-              - CURRENT
-              - ALL
-          required: false
-          description: |
-            Período a ser consultado
-              * `CURRENT` - Métricas do dia atual.
-              * `ALL` - Métricas de todo o período disponível.
         - $ref: '#/components/parameters/page'
         - $ref: '#/components/parameters/pageSize'
+        - $ref: '#/components/parameters/period'
       responses:
         '200':
           description: Dados das métricas
@@ -2803,6 +2792,15 @@ components:
         Conta poupança - foi criada para estimular as pessoas a pouparem. O dinheiro que ficar na conta por trinta dias passa a gerar rendimentos, com isenção de imposto de renda para quem declara. Ou seja, o dinheiro “cresce” (rende) enquanto ficar guardado na conta. Cada depósito terá rendimentos de mês em mês, sempre no dia do mês em que o dinheiro tiver sido depositado
         Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a 'destinada à execução de transações de pagamento em moeda eletrônica realizadas com base em fundos denominados em reais previamente aportados'
       example: CONTA_DEPOSITO_A_VISTA
+    EnumAdminMetricsPeriod:
+      type: string
+      enum:
+        - CURRENT
+        - ALL
+      description: |
+        Período a ser consultado
+           `CURRENT` - Métricas do dia atual.
+           `ALL` - Métricas de todo o período disponível.
     EnumApplicationIntervals:
       type: string
       enum:
@@ -8615,3 +8613,9 @@ components:
         type: integer
         default: 25
         minimum: 1
+    period:
+      in: query
+      description: 'O período a ser retornado. Se não for informado, o padrão será ALL'
+      name: period
+      schema:
+        $ref: '#/components/schemas/EnumAdminMetricsPeriod'
