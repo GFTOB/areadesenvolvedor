@@ -4914,6 +4914,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização titular das dependências
                         required:
                           - name
                           - companies
@@ -4928,6 +4929,7 @@ paths:
                             type: array
                             items:
                               type: object
+                              description: Lista de produtos e serviços referente adiantamento a depositante
                               required:
                                 - name
                                 - cnpjNumber

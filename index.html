@@ -722,6 +722,12 @@
                     <a href="#tocS_EnumTransactionMethods" class="toc-h2 toc-link" data-title="EnumTransactionMethods">EnumTransactionMethods</a>
                   </li>
                   <li>
+                    <a href="#tocS_EnumUnarrangedAccountOverdraftFeeCode" class="toc-h2 toc-link" data-title="EnumUnarrangedAccountOverdraftFeeCode">EnumUnarrangedAccountOverdraftFeeCode</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumUnarrangedAccountOverdraftFeeName" class="toc-h2 toc-link" data-title="EnumUnarrangedAccountOverdraftFeeName">EnumUnarrangedAccountOverdraftFeeName</a>
+                  </li>
+                  <li>
                     <a href="#tocS_EnumWeekDay" class="toc-h2 toc-link" data-title="EnumWeekDay">EnumWeekDay</a>
                   </li>
                   <li>
@@ -19441,6 +19447,96 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </tr>
 </tbody></table>
 
+<h2 id="tocS_EnumUnarrangedAccountOverdraftFeeCode">EnumUnarrangedAccountOverdraftFeeCode</h2>
+
+<p><a id="schemaenumunarrangedaccountoverdraftfeecode"></a>
+<a id="schema_EnumUnarrangedAccountOverdraftFeeCode"></a>
+<a id="tocSenumunarrangedaccountoverdraftfeecode"></a>
+<a id="tocsenumunarrangedaccountoverdraftfeecode"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"ADIANT_DEPOSITANTE"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Sigla de identificação do serviço relacionado à Modalidade de Adiantamento a depositante, para pessoa jurídica.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Sigla de identificação do serviço relacionado à Modalidade de Adiantamento a depositante, para pessoa jurídica.</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>ADIANT_DEPOSITANTE</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumUnarrangedAccountOverdraftFeeName">EnumUnarrangedAccountOverdraftFeeName</h2>
+
+<p><a id="schemaenumunarrangedaccountoverdraftfeename"></a>
+<a id="schema_EnumUnarrangedAccountOverdraftFeeName"></a>
+<a id="tocSenumunarrangedaccountoverdraftfeename"></a>
+<a id="tocsenumunarrangedaccountoverdraftfeename"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"CONCESSAO_ADIANTAMENTO_DEPOSITANTE"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Nome da Tarifa cobrada sobre Serviço que incide sobre Adiantamento a depositante, para pessoa jurídica.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Nome da Tarifa cobrada sobre Serviço que incide sobre Adiantamento a depositante, para pessoa jurídica.</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>CONCESSAO_ADIANTAMENTO_DEPOSITANTE</td>
+</tr>
+</tbody></table>
+
 <h2 id="tocS_EnumWeekDay">EnumWeekDay</h2>
 
 <p><a id="schemaenumweekday"></a>
@@ -24125,7 +24221,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Organização titular das dependências</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24154,6 +24255,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_PersonalUnarrangedAccountOverdraftCompany"></a>
 <a id="tocSpersonalunarrangedaccountoverdraftcompany"></a>
 <a id="tocspersonalunarrangedaccountoverdraftcompany"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Empresa A1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
@@ -24260,7 +24362,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Lista de produtos e serviços referente adiantamento a depositante</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24301,6 +24408,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_PersonalUnarrangedAccountOverdraftFee"></a>
 <a id="tocSpersonalunarrangedaccountoverdraftfee"></a>
 <a id="tocspersonalunarrangedaccountoverdraftfee"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"priorityServices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -30530,7 +30638,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>» brand</td>
 <td><a href="#schemapersonalunarrangedaccountoverdraftbrand">PersonalUnarrangedAccountOverdraftBrand</a></td>
 <td>true</td>
-<td></td>
+<td>Organização titular das dependências</td>
 </tr>
 <tr>
 <td>links</td>
@@ -31821,13 +31929,13 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </thead><tbody>
 <tr>
 <td>name</td>
-<td>string</td>
+<td><a href="#schemaenumunarrangedaccountoverdraftfeename">EnumUnarrangedAccountOverdraftFeeName</a></td>
 <td>true</td>
 <td>Nome da Tarifa cobrada sobre Serviço que incide sobre Adiantamento a depositante, para pessoa jurídica.</td>
 </tr>
 <tr>
 <td>code</td>
-<td>string</td>
+<td><a href="#schemaenumunarrangedaccountoverdraftfeecode">EnumUnarrangedAccountOverdraftFeeCode</a></td>
 <td>true</td>
 <td>Sigla de identificação do serviço relacionado à Modalidade de Adiantamento a depositante, para pessoa jurídica.</td>
 </tr>
@@ -31854,22 +31962,6 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td><a href="#schemamaximumprice">MaximumPrice</a></td>
 <td>true</td>
 <td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>CONCESSAO_ADIANTAMENTO_DEPOSITANTE</td>
-</tr>
-<tr>
-<td>code</td>
-<td>ADIANT_DEPOSITANTE</td>
 </tr>
 </tbody></table></p>
 
