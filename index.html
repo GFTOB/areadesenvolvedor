@@ -668,6 +668,9 @@
                     <a href="#tocS_EnumOpeningClosingChannels" class="toc-h2 toc-link" data-title="EnumOpeningClosingChannels">EnumOpeningClosingChannels</a>
                   </li>
                   <li>
+                    <a href="#tocS_EnumPersonalLoanType" class="toc-h2 toc-link" data-title="EnumPersonalLoanType">EnumPersonalLoanType</a>
+                  </li>
+                  <li>
                     <a href="#tocS_EnumPhoneChannelsServicesCode" class="toc-h2 toc-link" data-title="EnumPhoneChannelsServicesCode">EnumPhoneChannelsServicesCode</a>
                   </li>
                   <li>
@@ -9985,13 +9988,13 @@ This operation does not require authentication
 <td>indexer</td>
 <td><a href="#schemaindexer">Indexer</a></td>
 <td>true</td>
-<td></td>
+<td>Percentual que corresponde a mediana da taxa efetiva cobrada do cliente pela contratação do Empréstimo, no intervalo informado.</td>
 </tr>
 <tr>
 <td>customers</td>
 <td><a href="#schemacustomer">Customer</a></td>
 <td>true</td>
-<td></td>
+<td>Percentual de clientes em cada faixa.</td>
 </tr>
 </tbody></table>
 
@@ -14586,7 +14589,7 @@ This operation does not require authentication
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
@@ -14770,7 +14773,7 @@ This operation does not require authentication
           </span><span class="p">},</span><span class="w">
           </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
@@ -14913,7 +14916,7 @@ This operation does not require authentication
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -15857,7 +15860,7 @@ This operation does not require authentication
 <td>»» customers</td>
 <td><a href="#schemacustomer">Customer</a></td>
 <td>true</td>
-<td></td>
+<td>Percentual de clientes em cada faixa.</td>
 </tr>
 <tr>
 <td>» minimum</td>
@@ -16260,7 +16263,12 @@ This operation does not require authentication
   </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Percentual de clientes em cada faixa.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -16283,6 +16291,7 @@ This operation does not require authentication
 <a id="schema_DiscoveryOutage"></a>
 <a id="tocSdiscoveryoutage"></a>
 <a id="tocsdiscoveryoutage"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"outageTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
@@ -17945,6 +17954,77 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <tr>
 <td>**</td>
 <td>OUTROS</td>
+</tr>
+</tbody></table>
+
+<h2 id="tocS_EnumPersonalLoanType">EnumPersonalLoanType</h2>
+
+<p><a id="schemaenumpersonalloantype"></a>
+<a id="schema_EnumPersonalLoanType"></a>
+<a id="tocSenumpersonalloantype"></a>
+<a id="tocsenumpersonalloantype"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"EMPRESTIMO_CREDITO_PESSOAL_CONSIGNADO"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Modalidades de empréstimos ofertados para pessoa Natural, conforme Circular 4015-Bacen. Segundo cartilha do Bacen: Empréstimo é um contrato entre o cliente e uma instituição financeira (banco, cooperativa de crédito, caixa econômica) pelo qual o cliente recebe uma quantia em dinheiro que deverá ser devolvida em prazo determinado, acrescida dos juros acertados. Os recursos obtidos no empréstimo não tem destinação específica.
+  * <code>EMPRESTIMO_CREDITO_PESSOAL_CONSIGNADO</code> -  operações de crédito com retenção de parcela do salário ou benefício do tomador, para o pagamento das prestações do empréstimo – desconto em folha de pagamento – nos termos da legislação em vigor
+  * <code>EMPRESTIMO_CREDITO_PESSOAL_SEM_CONSIGNACAO</code> - operações de empréstimos às pessoa natural, sem vinculação com aquisição de bem ou serviço e sem retenção de parcela do salário ou benefício do tomador para o pagamento das prestações do empréstimo
+  * <code>EMPRESTIMO_HOME_EQUITY</code> - empréstimos pessoa natural, garantidos por hipoteca ou por alienação fiduciária de bens imóveis residenciais, sem vinculação a aquisição de bens
+  * <code>EMPRESTIMO_MICROCREDITO_PRODUTIVO_ORIENTADO</code> - segundo PNMPO é o crédito concedido para financiamento das atividades produtivas, cuja metodologia será estabelecida em regulamento, observada a preferência do relacionamento direto com os empreendedores, admitido o uso de tecnologias digitais e eletrônicas que possam substituir o contato presencial
+  * <code>EMPRESTIMO_CHEQUE_ESPECIAL</code> - operações de crédito vinculadas à conta corrente, nas quais determinado limite de crédito é disponibilizado aos clientes para utilização de acordo com suas conveniências, sem necessidade de comunicação prévia à instituição financeira
+  * <code>EMPRESTIMO_CONTA_GARANTIDA</code> - operações de crédito rotativo, nas quais determinado limite de crédito é disponibilizado para utilização pelo cliente, através da simples movimentação da conta corrente e/ou solicitação formal à instituição financeira. As operações classificadas nessa modalidade não devem ter data definida para a amortização do saldo devedor, exceto a estabelecida para vigência do contrato</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Modalidades de empréstimos ofertados para pessoa Natural, conforme Circular 4015-Bacen. Segundo cartilha do Bacen: Empréstimo é um contrato entre o cliente e uma instituição financeira (banco, cooperativa de crédito, caixa econômica) pelo qual o cliente recebe uma quantia em dinheiro que deverá ser devolvida em prazo determinado, acrescida dos juros acertados. Os recursos obtidos no empréstimo não tem destinação específica.<br>  * <code>EMPRESTIMO_CREDITO_PESSOAL_CONSIGNADO</code> -  operações de crédito com retenção de parcela do salário ou benefício do tomador, para o pagamento das prestações do empréstimo – desconto em folha de pagamento – nos termos da legislação em vigor<br>  * <code>EMPRESTIMO_CREDITO_PESSOAL_SEM_CONSIGNACAO</code> - operações de empréstimos às pessoa natural, sem vinculação com aquisição de bem ou serviço e sem retenção de parcela do salário ou benefício do tomador para o pagamento das prestações do empréstimo<br>  * <code>EMPRESTIMO_HOME_EQUITY</code> - empréstimos pessoa natural, garantidos por hipoteca ou por alienação fiduciária de bens imóveis residenciais, sem vinculação a aquisição de bens<br>  * <code>EMPRESTIMO_MICROCREDITO_PRODUTIVO_ORIENTADO</code> - segundo PNMPO é o crédito concedido para financiamento das atividades produtivas, cuja metodologia será estabelecida em regulamento, observada a preferência do relacionamento direto com os empreendedores, admitido o uso de tecnologias digitais e eletrônicas que possam substituir o contato presencial<br>  * <code>EMPRESTIMO_CHEQUE_ESPECIAL</code> - operações de crédito vinculadas à conta corrente, nas quais determinado limite de crédito é disponibilizado aos clientes para utilização de acordo com suas conveniências, sem necessidade de comunicação prévia à instituição financeira<br>  * <code>EMPRESTIMO_CONTA_GARANTIDA</code> - operações de crédito rotativo, nas quais determinado limite de crédito é disponibilizado para utilização pelo cliente, através da simples movimentação da conta corrente e/ou solicitação formal à instituição financeira. As operações classificadas nessa modalidade não devem ter data definida para a amortização do saldo devedor, exceto a estabelecida para vigência do contrato</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>EMPRESTIMO_CREDITO_PESSOAL_CONSIGNADO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EMPRESTIMO_CREDITO_PESSOAL_SEM_CONSIGNACAO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EMPRESTIMO_HOME_EQUITY</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EMPRESTIMO_MICROCREDITO_PRODUTIVO_ORIENTADO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EMPRESTIMO_CHEQUE_ESPECIAL</td>
+</tr>
+<tr>
+<td>**</td>
+<td>EMPRESTIMO_CONTA_GARANTIDA</td>
 </tr>
 </tbody></table>
 
@@ -19657,7 +19737,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.8700"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Percentual que corresponde a mediana da taxa efetiva cobrada do cliente pela contratação do Empréstimo, no intervalo informado.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -19680,6 +19765,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_InterestRate"></a>
 <a id="tocSinterestrate"></a>
 <a id="tocsinterestrate"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
@@ -20178,7 +20264,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="tocsloaninterestrate"></a></p>
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -20233,7 +20319,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </thead><tbody>
 <tr>
 <td>referentialRateIndexer</td>
-<td>string</td>
+<td><a href="#schemaenumreferentialrateindexer">EnumReferentialRateIndexer</a></td>
 <td>true</td>
 <td>Tipos de taxas referenciais ou indexadores, conforme Anexo 5: Taxa referencial ou Indexador (Indx), do Documento 3040</td>
 </tr>
@@ -20260,90 +20346,6 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>string</td>
 <td>true</td>
 <td>Percentual máximo cobrado (taxa efetiva) no mês de referência, para o Empréstimo contratado  A apuração pode acontecer com até 4 casas decimais. O preenchimento deve respeitar as 4 casas decimais, mesmo que venham preenchidas com zeros (representação de porcentagem p.ex: 0.1500. Este valor representa 15%. O valor 1 representa 100%)</td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>referentialRateIndexer</td>
-<td>SEM_INDEXADOR_TAXA</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>PRE_FIXADO</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_TR_TBF</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_TJLP</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_LIBOR</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_TLP</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTRAS_TAXAS_POS_FIXADAS</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>FLUTUANTES_CDI</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>FLUTUANTES_SELIC</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTRAS_TAXAS_FLUTUANTES</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>INDICES_PRECOS_IGPM</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>INDICES_PRECOS_IPCA</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>INDICES_PRECOS_IPCC</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTROS_INDICES_PRECO</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TCR_PRE</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TCR_POS</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TRFC_PRE</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TRFC_POS</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTROS_INDEXADORES</td>
 </tr>
 </tbody></table>
 
@@ -20436,39 +20438,15 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </tr>
 <tr>
 <td>minimum</td>
-<td>object</td>
-<td>true</td>
-<td>Valor mínimo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
+<td><a href="#schemaminimumprice">MinimumPrice</a></td>
 <td>true</td>
 <td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
 </tr>
 <tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
-</tr>
-<tr>
 <td>maximum</td>
-<td>object</td>
-<td>true</td>
-<td>Valor máximo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
+<td><a href="#schemamaximumprice">MaximumPrice</a></td>
 <td>true</td>
 <td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-<tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
 </tr>
 </tbody></table>
 
@@ -20672,7 +20650,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>customers</td>
 <td><a href="#schemacustomer">Customer</a></td>
 <td>true</td>
-<td></td>
+<td>Percentual de clientes em cada faixa.</td>
 </tr>
 </tbody></table>
 
@@ -23382,7 +23360,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
@@ -23443,7 +23421,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </thead><tbody>
 <tr>
 <td>type</td>
-<td>string</td>
+<td><a href="#schemaenumpersonalloantype">EnumPersonalLoanType</a></td>
 <td>true</td>
 <td>Modalidades de empréstimos ofertados para pessoa Natural, conforme Circular 4015-Bacen. Segundo cartilha do Bacen: Empréstimo é um contrato entre o cliente e uma instituição financeira (banco, cooperativa de crédito, caixa econômica) pelo qual o cliente recebe uma quantia em dinheiro que deverá ser devolvida em prazo determinado, acrescida dos juros acertados. Os recursos obtidos no empréstimo não tem destinação específica.<br>  * <code>EMPRESTIMO_CREDITO_PESSOAL_CONSIGNADO</code> -  operações de crédito com retenção de parcela do salário ou benefício do tomador, para o pagamento das prestações do empréstimo – desconto em folha de pagamento – nos termos da legislação em vigor<br>  * <code>EMPRESTIMO_CREDITO_PESSOAL_SEM_CONSIGNACAO</code> - operações de empréstimos às pessoa natural, sem vinculação com aquisição de bem ou serviço e sem retenção de parcela do salário ou benefício do tomador para o pagamento das prestações do empréstimo<br>  * <code>EMPRESTIMO_HOME_EQUITY</code> - empréstimos pessoa natural, garantidos por hipoteca ou por alienação fiduciária de bens imóveis residenciais, sem vinculação a aquisição de bens<br>  * <code>EMPRESTIMO_MICROCREDITO_PRODUTIVO_ORIENTADO</code> - segundo PNMPO é o crédito concedido para financiamento das atividades produtivas, cuja metodologia será estabelecida em regulamento, observada a preferência do relacionamento direto com os empreendedores, admitido o uso de tecnologias digitais e eletrônicas que possam substituir o contato presencial<br>  * <code>EMPRESTIMO_CHEQUE_ESPECIAL</code> - operações de crédito vinculadas à conta corrente, nas quais determinado limite de crédito é disponibilizado aos clientes para utilização de acordo com suas conveniências, sem necessidade de comunicação prévia à instituição financeira<br>  * <code>EMPRESTIMO_CONTA_GARANTIDA</code> - operações de crédito rotativo, nas quais determinado limite de crédito é disponibilizado para utilização pelo cliente, através da simples movimentação da conta corrente e/ou solicitação formal à instituição financeira. As operações classificadas nessa modalidade não devem ter data definida para a amortização do saldo devedor, exceto a estabelecida para vigência do contrato</td>
 </tr>
@@ -23470,38 +23448,6 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>string</td>
 <td>true</td>
 <td>Campo aberto para informar as condições contratuais relativas à Modalidade de Financiamentos para pessoa jurídica informada. Pode ser informada a URL referente ao endereço onde constam as condições informadas. Endereço eletrônico de acesso ao canal.</td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>type</td>
-<td>EMPRESTIMO_CREDITO_PESSOAL_CONSIGNADO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>EMPRESTIMO_CREDITO_PESSOAL_SEM_CONSIGNACAO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>EMPRESTIMO_HOME_EQUITY</td>
-</tr>
-<tr>
-<td>type</td>
-<td>EMPRESTIMO_MICROCREDITO_PRODUTIVO_ORIENTADO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>EMPRESTIMO_CHEQUE_ESPECIAL</td>
-</tr>
-<tr>
-<td>type</td>
-<td>EMPRESTIMO_CONTA_GARANTIDA</td>
 </tr>
 </tbody></table>
 
@@ -23566,7 +23512,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
           </span><span class="p">},</span><span class="w">
           </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
@@ -23620,7 +23566,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Organização controladora do grupo de instituições financeiras</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23649,6 +23600,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_PersonalLoanCompany"></a>
 <a id="tocSpersonalloancompany"></a>
 <a id="tocspersonalloancompany"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Empresa da Marca A"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
@@ -23709,7 +23661,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -30290,7 +30242,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>» brand</td>
 <td><a href="#schemapersonalloanbrand">PersonalLoanBrand</a></td>
 <td>true</td>
-<td></td>
+<td>Organização controladora do grupo de instituições financeiras</td>
 </tr>
 <tr>
 <td>links</td>
