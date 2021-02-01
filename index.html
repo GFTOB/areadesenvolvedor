@@ -671,6 +671,9 @@
                     <a href="#tocS_EnumOpeningClosingChannels" class="toc-h2 toc-link" data-title="EnumOpeningClosingChannels">EnumOpeningClosingChannels</a>
                   </li>
                   <li>
+                    <a href="#tocS_EnumPersonalFinancingType" class="toc-h2 toc-link" data-title="EnumPersonalFinancingType">EnumPersonalFinancingType</a>
+                  </li>
+                  <li>
                     <a href="#tocS_EnumPersonalLoanType" class="toc-h2 toc-link" data-title="EnumPersonalLoanType">EnumPersonalLoanType</a>
                   </li>
                   <li>
@@ -17999,6 +18002,83 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </tr>
 </tbody></table>
 
+<h2 id="tocS_EnumPersonalFinancingType">EnumPersonalFinancingType</h2>
+
+<p><a id="schemaenumpersonalfinancingtype"></a>
+<a id="schema_EnumPersonalFinancingType"></a>
+<a id="tocSenumpersonalfinancingtype"></a>
+<a id="tocsenumpersonalfinancingtype"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"FINANCIAMENTO_AQUISICAO_BENS_VEICULOS_AUTOMOTORES"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Modalidades de financiamentos ofertados para pessoas naturais, conforme Circular 4015-Bacen. Segundo cartilha do Bacen: Financiamento é um contrato entre o cliente e uma instituição financeira, mas com, destinação específica como para a aquisição de veículo ou de bem imóvel, que funcionam como garantia para o crédito concedido</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Modalidades de financiamentos ofertados para pessoas naturais, conforme Circular 4015-Bacen. Segundo cartilha do Bacen: Financiamento é um contrato entre o cliente e uma instituição financeira, mas com, destinação específica como para a aquisição de veículo ou de bem imóvel, que funcionam como garantia para o crédito concedido</td>
+</tr>
+</tbody></table>
+
+<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_AQUISICAO_BENS_VEICULOS_AUTOMOTORES</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_AQUISICAO_BENS_OUTROS_BENS</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_MICROCREDITO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_RURAL_CUSTEIO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_RURAL_INVESTIMENTO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_RURAL_COMERCIALIZACAO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_RURAL_INDUSTRIALIZACAO</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_IMOBILIARIO_SISTEMA_FINANCEIRO_HABITACAO_SFH</td>
+</tr>
+<tr>
+<td>**</td>
+<td>FINANCIAMENTO_IMOBILIARIO_SISTEMA_FINANCEIRO_HABITACAO_SFI</td>
+</tr>
+</tbody></table>
+
 <h2 id="tocS_EnumPersonalLoanType">EnumPersonalLoanType</h2>
 
 <p><a id="schemaenumpersonalloantype"></a>
@@ -19693,39 +19773,15 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </tr>
 <tr>
 <td>minimum</td>
-<td>object</td>
-<td>true</td>
-<td>Valor mínimo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
+<td><a href="#schemaminimumprice">MinimumPrice</a></td>
 <td>true</td>
 <td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
 </tr>
 <tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
-</tr>
-<tr>
 <td>maximum</td>
-<td>object</td>
-<td>true</td>
-<td>Valor máximo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
+<td><a href="#schemamaximumprice">MaximumPrice</a></td>
 <td>true</td>
 <td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-<tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
 </tr>
 </tbody></table>
 
@@ -22173,7 +22229,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 </thead><tbody>
 <tr>
 <td>type</td>
-<td>string</td>
+<td><a href="#schemaenumpersonalfinancingtype">EnumPersonalFinancingType</a></td>
 <td>true</td>
 <td>Modalidades de financiamentos ofertados para pessoas naturais, conforme Circular 4015-Bacen. Segundo cartilha do Bacen: Financiamento é um contrato entre o cliente e uma instituição financeira, mas com, destinação específica como para a aquisição de veículo ou de bem imóvel, que funcionam como garantia para o crédito concedido</td>
 </tr>
@@ -22181,7 +22237,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>fees</td>
 <td><a href="#schemapersonalfinancingfee">PersonalFinancingFee</a></td>
 <td>true</td>
-<td></td>
+<td>Objeto que reúne informações de tarifas de serviços</td>
 </tr>
 <tr>
 <td>interestRates</td>
@@ -22200,50 +22256,6 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>string</td>
 <td>true</td>
 <td>Campo aberto para informar as condições contratuais relativas ao produto ou serviço informado. Pode ser informada a URL referente ao endereço onde constam as condições informadas.</td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_AQUISICAO_BENS_VEICULOS_AUTOMOTORES</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_AQUISICAO_BENS_OUTROS_BENS</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_MICROCREDITO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_RURAL_CUSTEIO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_RURAL_INVESTIMENTO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_RURAL_COMERCIALIZACAO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_RURAL_INDUSTRIALIZACAO</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_IMOBILIARIO_SISTEMA_FINANCEIRO_HABITACAO_SFH</td>
-</tr>
-<tr>
-<td>type</td>
-<td>FINANCIAMENTO_IMOBILIARIO_SISTEMA_FINANCEIRO_HABITACAO_SFI</td>
 </tr>
 </tbody></table>
 
@@ -22362,7 +22374,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Organização controladora do grupo de instituições financeiras</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22391,6 +22408,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_PersonalFinancingCompany"></a>
 <a id="tocSpersonalfinancingcompany"></a>
 <a id="tocspersonalfinancingcompany"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Empresa A1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
@@ -22596,7 +22614,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Objeto que reúne informações de tarifas de serviços</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22609,7 +22632,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>services</td>
 <td>[<a href="#schemafinancingservice">FinancingService</a>]</td>
 <td>true</td>
-<td></td>
+<td>Lista das Tarifas cobradas sobre Serviços</td>
 </tr>
 </tbody></table>
 
@@ -22619,6 +22642,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_PersonalInvoiceFinancings"></a>
 <a id="tocSpersonalinvoicefinancings"></a>
 <a id="tocspersonalinvoicefinancings"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DESCONTO_DUPLICATAS"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -28904,7 +28928,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>» brand</td>
 <td><a href="#schemapersonalfinancingbrand">PersonalFinancingBrand</a></td>
 <td>true</td>
-<td></td>
+<td>Organização controladora do grupo de instituições financeiras</td>
 </tr>
 <tr>
 <td>links</td>
