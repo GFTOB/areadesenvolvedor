@@ -983,7 +983,6 @@ components:
       properties:
         minimumBalance:
           $ref: '#/components/schemas/MinimumBalance'
-          description: 'Saldo mínimo exigido nos Termos e condições contratuais, que regem as contas comercializadas.'
         elegibilityCriteriaInfo:
           type: string
           maxLength: 2000
@@ -1003,7 +1002,6 @@ components:
           $ref: '#/components/schemas/EnumApplicationIntervals'
         indexer:
           $ref: '#/components/schemas/Indexer'
-          description: Percentual que corresponde a mediana (taxa efetiva) cobrada do cliente
         customers:
           $ref: '#/components/schemas/Customer'
       required:
@@ -1138,7 +1136,6 @@ components:
       properties:
         identification:
           $ref: '#/components/schemas/BankingAgentIdentification'
-          description: Dados de identificação do correspondente.
         locations:
           type: array
           items:
@@ -2448,7 +2445,6 @@ components:
           example: 'https://empresadaorganizacaoa.com/complementarylist'
         businessUnarrangedAccountOverdraft:
           $ref: '#/components/schemas/BusinessUnarrangedAccountOverdraft'
-          description: Lista de produtos e serviços referente adiantamento a depositante
     BusinessUnarrangedAccountOverdraftFee:
       type: object
       description: Objeto que reúne informações de tarifas de serviços
@@ -4781,7 +4777,6 @@ components:
           example: 'https://empresadaorganizacaoa.com/complementarylist'
         personalUnarrangedAccountOverdraft:
           $ref: '#/components/schemas/PersonalUnarrangedAccountOverdraft'
-          description: Lista de produtos e serviços referente adiantamento a depositante
     PersonalUnarrangedAccountOverdraftFee:
       type: object
       description: Objeto que reúne informações de tarifas de serviços
@@ -5012,7 +5007,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/BankingAgentsBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -5270,7 +5264,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/BusinessAccountsBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -5407,7 +5400,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/BusinessCreditCardBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -5549,7 +5541,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/BusinessFinancingBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -5711,7 +5702,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/BusinessInvoiceFinancingsBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -6089,7 +6079,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/BusinessLoanBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -6529,7 +6518,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/BusinessUnarrangedAccountOverdraftBrand'
-              description: Organização titular das dependências.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -6709,7 +6697,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/ElectronicChannelsBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -6823,7 +6810,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/PersonalAccountBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -7096,7 +7082,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/PersonalCreditCardBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -7240,7 +7225,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/PersonalFinancingBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -7404,7 +7388,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/PersonalInvoiceFinancingsBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -7782,7 +7765,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/PersonalLoanBrand'
-              description: Organização controladora do grupo de instituições financeiras
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -8223,7 +8205,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/PersonalUnarrangedAccountOverdraftBrand'
-              description: Organização titular das dependências
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -8325,7 +8306,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/PhoneChannelsBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -8438,7 +8418,6 @@ components:
           properties:
             brand:
               $ref: '#/components/schemas/SharedAutomatedTellerMachinesBrand'
-              description: Organização controladora do grupo de instituições financeiras.
         links:
           $ref: '#/components/schemas/Links'
         meta:

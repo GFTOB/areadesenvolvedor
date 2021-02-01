@@ -44,7 +44,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -531,7 +530,6 @@ paths:
                                           - closingProcessInfo
                                         properties:
                                           minimumBalance:
-                                            description: 'Saldo mínimo exigido nos Termos e condições contratuais, que regem as contas comercializadas.'
                                             type: object
                                             required:
                                               - value
@@ -873,7 +871,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -1240,7 +1237,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras
                         type: object
                         required:
                           - name
@@ -2002,7 +1998,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -2549,7 +2544,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - companies
@@ -3128,7 +3122,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - companies
@@ -3365,7 +3358,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -3796,7 +3788,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -4072,7 +4063,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -4695,7 +4685,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -5242,7 +5231,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização titular das dependências
                         type: object
                         required:
                           - name
@@ -5284,7 +5272,6 @@ paths:
                                     Restrição: Será obrigatorimente preenchido se houver lista complementar com os nomes e CNPJs a ser disponibilizada
                                   example: 'https://empresadaorganizacaoa.com/complementarylist'
                                 personalUnarrangedAccountOverdraft:
-                                  description: Lista de produtos e serviços referente adiantamento a depositante
                                   type: object
                                   required:
                                     - fees
@@ -5362,7 +5349,6 @@ paths:
                                                     Faixas para cobrança da taxa efetiva aplicada pela contratação do crédito, no intervalo informado: 1ª faixa, 2ª faixa, 3ª faixa e 4ª faixa. Segundo Normativa nº32 de 2020: 'Distribuição de frequência relativa dos valores de tarifas e taxas de juros cobrados dos clientes, de que trata o § 2º do art. 3º da Circular nº 4.015, de 2020, deve dar-se com base em quatro faixas de igual tamanho, com explicitação dos valores sobre a mediana e o percentual de clientes em cada uma dessas faixas.
                                                   example: 1_FAIXA
                                                 indexer:
-                                                  description: Percentual que corresponde a mediana (taxa efetiva) cobrada do cliente
                                                   type: object
                                                   properties:
                                                     rate:
@@ -5549,7 +5535,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização titular das dependências.
                         type: object
                         required:
                           - name
@@ -5591,7 +5576,6 @@ paths:
                                     Restrição: Será obrigatorimente preenchido se houver lista complementar com os nomes e CNPJs a ser disponibilizada
                                   example: 'https://empresadaorganizacaoa.com/complementarylist'
                                 businessUnarrangedAccountOverdraft:
-                                  description: Lista de produtos e serviços referente adiantamento a depositante
                                   type: object
                                   required:
                                     - fees

@@ -40,7 +40,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -102,7 +101,6 @@ paths:
                                             - services
                                           properties:
                                             identification:
-                                              description: Dados de identificação do correspondente.
                                               type: object
                                               properties:
                                                 corporationName:
@@ -1069,7 +1067,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -1306,7 +1303,6 @@ paths:
                       - brand
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         required:
                           - name
@@ -1606,7 +1602,6 @@ paths:
                     type: object
                     properties:
                       brand:
-                        description: Organização controladora do grupo de instituições financeiras.
                         type: object
                         properties:
                           name:
