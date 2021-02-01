@@ -9744,39 +9744,15 @@ This operation does not require authentication
 </tr>
 <tr>
 <td>minimum</td>
-<td>object</td>
-<td>true</td>
-<td>Valor mínimo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
+<td><a href="#schemaminimumprice">MinimumPrice</a></td>
 <td>true</td>
 <td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
 </tr>
 <tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
-</tr>
-<tr>
 <td>maximum</td>
-<td>object</td>
-<td>true</td>
-<td>Valor máximo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
+<td><a href="#schemamaximumprice">MaximumPrice</a></td>
 <td>true</td>
 <td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-<tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
 </tr>
 </tbody></table>
 
@@ -9869,39 +9845,15 @@ This operation does not require authentication
 </tr>
 <tr>
 <td>minimum</td>
-<td>object</td>
+<td><a href="#schemaminimumprice">MinimumPrice</a></td>
 <td>true</td>
 <td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
-<td>true</td>
-<td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-<tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
 </tr>
 <tr>
 <td>maximum</td>
-<td>object</td>
+<td><a href="#schemamaximumprice">MaximumPrice</a></td>
 <td>true</td>
 <td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-<tr>
-<td>» value</td>
-<td>string</td>
-<td>true</td>
-<td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
-</tr>
-<tr>
-<td>» currency</td>
-<td>string</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
 </tr>
 </tbody></table>
 
@@ -9916,7 +9868,12 @@ This operation does not require authentication
   </span><span class="nl">"prepaidPaymentAccount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40% Rendimento a.m."</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Valores dos percentuais de taxas.</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -9945,6 +9902,7 @@ This operation does not require authentication
 <a id="schema_AccountsTermsConditions"></a>
 <a id="tocSaccountstermsconditions"></a>
 <a id="tocsaccountstermsconditions"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"minimumBalance"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="p">,</span><span class="w">
@@ -12183,7 +12141,7 @@ This operation does not require authentication
 <td>incomeRate</td>
 <td><a href="#schemaaccountsincomerate">AccountsIncomeRate</a></td>
 <td>true</td>
-<td></td>
+<td>Valores dos percentuais de taxas.</td>
 </tr>
 </tbody></table>
 
@@ -20465,7 +20423,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -20494,6 +20457,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_Meta"></a>
 <a id="tocSmeta"></a>
 <a id="tocsmeta"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"totalRecords"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nl">"totalPages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
@@ -20573,7 +20537,12 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
   </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -20602,6 +20571,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <a id="schema_MonthlyPrice"></a>
 <a id="tocSmonthlyprice"></a>
 <a id="tocsmonthlyprice"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"monthlyFee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2000.00"</span><span class="p">,</span><span class="w">
@@ -20927,7 +20897,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>incomeRate</td>
 <td><a href="#schemaaccountsincomerate">AccountsIncomeRate</a></td>
 <td>true</td>
-<td></td>
+<td>Valores dos percentuais de taxas.</td>
 </tr>
 </tbody></table>
 
@@ -30905,13 +30875,13 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>minimum</td>
 <td><a href="#schemaminimumprice">MinimumPrice</a></td>
 <td>true</td>
-<td></td>
+<td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
 </tr>
 <tr>
 <td>maximum</td>
 <td><a href="#schemamaximumprice">MaximumPrice</a></td>
 <td>true</td>
-<td></td>
+<td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
 </tr>
 </tbody></table></p>
 
@@ -31745,13 +31715,13 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>minimum</td>
 <td><a href="#schemaminimumprice">MinimumPrice</a></td>
 <td>true</td>
-<td></td>
+<td>Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
 </tr>
 <tr>
 <td>maximum</td>
 <td><a href="#schemamaximumprice">MaximumPrice</a></td>
 <td>true</td>
-<td></td>
+<td>Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência</td>
 </tr>
 </tbody></table>
 <h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
