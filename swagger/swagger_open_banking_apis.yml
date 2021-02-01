@@ -1681,17 +1681,7 @@ components:
         type:
           $ref: '#/components/schemas/EnumAccountType'
         fees:
-          type: object
-          description: Objeto que reúne informações de tarifas de serviços
-          required:
-            - services
-          properties:
-            services:
-              type: array
-              items:
-                $ref: '#/components/schemas/BusinessAccountsService'
-              minItems: 1
-              description: Lista das Tarifas cobradas sobre Serviços
+          $ref: '#/components/schemas/FeesBusinessAccount'
         serviceBundles:
           type: array
           items:
@@ -1726,6 +1716,7 @@ components:
           $ref: '#/components/schemas/AccountsIncomeRate'
     BusinessAccountsBrand:
       type: object
+      description: Organização controladora do grupo de instituições financeiras.
       required:
         - name
         - companies
@@ -1809,45 +1800,9 @@ components:
           maxItems: 4
           description: Lista distribuição preços tarifas de serviços
         minimum:
-          type: object
-          required:
-            - value
-            - currency
-          properties:
-            value:
-              type: string
-              pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
-              maxLength: 12
-              x-cds-type: AmountString
-              description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
-              example: '1350.00'
-            currency:
-              type: string
-              pattern: '^(\w{3}){1}$'
-              maxLength: 3
-              x-cds-type: CurrencyString
-              description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
-              example: BRL
+          $ref: '#/components/schemas/MinimumPrice'
         maximum:
-          type: object
-          required:
-            - value
-            - currency
-          properties:
-            value:
-              type: string
-              pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
-              maxLength: 12
-              x-cds-type: AmountString
-              description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
-              example: '8800.00'
-            currency:
-              type: string
-              pattern: '^(\w{3}){1}$'
-              maxLength: 3
-              x-cds-type: CurrencyString
-              description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
-              example: BRL
+          $ref: '#/components/schemas/MaximumPrice'
     BusinessCreditCard:
       type: object
       required:
@@ -3434,6 +3389,18 @@ components:
           description: 'Número de chamadas com erro nos dias anteriores. O primeiro item do array é referente a ontem, e assim por diante. Devem ser retornados no máximo sete dias caso estejam disponíveis.'
           items:
             type: integer
+    FeesBusinessAccount:
+      type: object
+      description: Objeto que reúne informações de tarifas de serviços
+      required:
+        - services
+      properties:
+        services:
+          type: array
+          items:
+            $ref: '#/components/schemas/BusinessAccountsService'
+          minItems: 1
+          description: Lista das Tarifas cobradas sobre Serviços
     FinancingInterestRate:
       type: object
       properties:
