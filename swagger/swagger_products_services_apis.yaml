@@ -226,7 +226,7 @@ paths:
                                                 prices:
                                                   type: array
                                                   items:
-                                                    $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
+                                                    $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
                                                   minItems: 4
                                                   maxItems: 4
                                                   description: 'Valor da mediana da tarifa, relativa ao serviço ofertado, informado no período'
@@ -269,7 +269,7 @@ paths:
                                                 prices:
                                                   type: array
                                                   items:
-                                                    $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
+                                                    $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
                                                   minItems: 4
                                                   maxItems: 4
                                                   description: Valor da tarifa cobrada referente aos Outros Serviços.
@@ -890,7 +890,7 @@ paths:
                                                 prices:
                                                   type: array
                                                   items:
-                                                    $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
+                                                    $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
                                                   minItems: 4
                                                   maxItems: 4
                                                   description: Lista distribuição preços tarifas de serviços
@@ -1203,7 +1203,7 @@ paths:
                                                 prices:
                                                   type: array
                                                   items:
-                                                    $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
+                                                    $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
                                                   minItems: 4
                                                   maxItems: 4
                                                 minimum:
@@ -2348,6 +2348,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização controladora do grupo de instituições financeiras
                         required:
                           - companies
                         properties:
@@ -2408,6 +2409,7 @@ paths:
                                         example: Cartão Universitário
                                       identification:
                                         type: object
+                                        description: Informações de identificação do cartão de crédito
                                         required:
                                           - product
                                           - creditCard
@@ -2478,6 +2480,7 @@ paths:
                                                 example: NA
                                       rewardsProgram:
                                         type: object
+                                        description: Informações sobre programas de recompensa presentes no cartão de crédito
                                         required:
                                           - hasRewardProgram
                                         properties:
@@ -2501,128 +2504,7 @@ paths:
                                             type: array
                                             description: Lista das Tarifas cobradas sobre Serviço relacionadas a Modalidade de Pagamento Pós-Pagas
                                             items:
-                                              type: object
-                                              required:
-                                                - name
-                                                - code
-                                                - chargingTriggerInfo
-                                                - prices
-                                                - minimum
-                                                - maximum
-                                              properties:
-                                                name:
-                                                  type: string
-                                                  enum:
-                                                    - ANUIDADE_CARTAO_BASICO_NACIONAL
-                                                    - ANUIDADE_CARTAO_BASICO_INTERNACIONAL
-                                                    - ANUIDADE_DIFERENCIADA
-                                                    - UTILIZACAO_CANAIS_ATENDIMENTO_RETIRADA_ESPECIE_BRASIL
-                                                    - UTILIZACAO_CANAIS_ATENDIMENTO_RETIRADA_ESPECIE_EXTERIOR
-                                                    - AVALIACAO_EMERGENCIAL_CREDITO
-                                                    - FORNECIMENTO_SEGUNDA_VIA_FUNCAO_CREDITO
-                                                    - PAGAMENTO_CONTAS_UTILIZANDO_FUNCAO_CREDITO
-                                                    - SMS
-                                                  description: Denominação de Serviços relacionados à Modalidade de Contas de Pagamento Pós-Pagas (Vide ENUM)
-                                                  example: ANUIDADE_CARTAO_BASICO_NACIONAL
-                                                code:
-                                                  type: string
-                                                  enum:
-                                                    - ANUIDADE_NACIONAL
-                                                    - ANUIDADE_INTERNACIONAL
-                                                    - ANUIDADE_DIFERENCIADA
-                                                    - SAQUE_CARTAO_BRASIL
-                                                    - SAQUE_CARTAO_EXTERIOR
-                                                    - AVALIACAO_EMERGENCIAL_CREDITO
-                                                    - EMISSAO_SEGUNDA_VIA
-                                                    - TARIFA_PAGAMENTO_CONTAS
-                                                    - SMS
-                                                  description: Sigla de identificação do Serviço relacionado à Modalidade de Contas de Pagamento Pós-Pagas (Vide ENUM)
-                                                  example: ANUIDADE_NACIONAL
-                                                chargingTriggerInfo:
-                                                  type: string
-                                                  maxLength: 2000
-                                                  pattern: \w*\W*
-                                                  description: 'Fatos geradores de cobrança que incidem sobre as Modalidades de Contas de Pagamento Pós-Pagas informada, para pessoa jurídica. (Campo Livre)'
-                                                  example: 'Disponibilização de rede de estabelecimentos afiliados, instalada no País, para pagamentos de bens e serviços, cobrada no máximo uma vez a cada doze meses, admitido o parcelamento da cobrança'
-                                                prices:
-                                                  type: array
-                                                  description: Lista distribuição preços tarifas de serviços
-                                                  items:
-                                                    type: object
-                                                    required:
-                                                      - interval
-                                                      - value
-                                                      - currency
-                                                      - customers
-                                                    properties:
-                                                      interval:
-                                                        $ref: '#/paths/~1personal-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalAccounts/items/properties/serviceBundles/items/properties/prices/items/properties/interval'
-                                                      value:
-                                                        type: string
-                                                        pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
-                                                        maxLength: 12
-                                                        x-cds-type: AmountString
-                                                        description: |
-                                                          Valor da mediana de cada faixa relativa ao serviço ofertado, informado no período, conforme Res nº 32 BCB, 2020. p.ex. '45.00' (representa um valor monetário. p.ex: 1547368.92. Este valor, considerando que a moeda seja BRL, significa R$ 1.547.368,92. O único separador presente deve ser o '.' (ponto) para indicar a casa decimal. Não deve haver separador de milhar)
-                                                        example: '2000.00'
-                                                      currency:
-                                                        $ref: '#/paths/~1personal-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalAccounts/items/properties/termsConditions/properties/minimumBalance/properties/currency'
-                                                      customers:
-                                                        type: object
-                                                        description: Percentual de clientes em cada faixa
-                                                        required:
-                                                          - rate
-                                                        properties:
-                                                          rate:
-                                                            type: string
-                                                            description: Percentual de clientes em cada faixa.
-                                                            pattern: '^[0-9](\.[0-9]{4})$|^NA$'
-                                                            example: '0.1500'
-                                                            maxLength: 6
-                                                  minItems: 4
-                                                  maxItems: 4
-                                                minimum:
-                                                  type: object
-                                                  description: Valor mínimo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.
-                                                  required:
-                                                    - value
-                                                    - currency
-                                                  properties:
-                                                    value:
-                                                      type: string
-                                                      pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
-                                                      maxLength: 12
-                                                      x-cds-type: AmountString
-                                                      description: Valor mínimo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
-                                                      example: '1350.00'
-                                                    currency:
-                                                      type: string
-                                                      pattern: '^(\w{3}){1}$'
-                                                      maxLength: 3
-                                                      x-cds-type: CurrencyString
-                                                      description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
-                                                      example: BRL
-                                                maximum:
-                                                  type: object
-                                                  description: Valor máximo cobrado para a tarifa de serviços sobre a base de clientes no mês de referência.
-                                                  required:
-                                                    - value
-                                                    - currency
-                                                  properties:
-                                                    value:
-                                                      type: string
-                                                      pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
-                                                      maxLength: 12
-                                                      x-cds-type: AmountString
-                                                      description: Valor máximo apurado para a tarifa de serviços sobre a base de clientes no mês de referência
-                                                      example: '8800.00'
-                                                    currency:
-                                                      type: string
-                                                      pattern: '^(\w{3}){1}$'
-                                                      maxLength: 3
-                                                      x-cds-type: CurrencyString
-                                                      description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
-                                                      example: BRL
+                                              $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items'
                                             minItems: 1
                                             maxItems: 9
                                       interest:
@@ -2956,6 +2838,7 @@ paths:
                     properties:
                       brand:
                         type: object
+                        description: Organização controladora do grupo de instituições financeiras
                         required:
                           - companies
                         properties:
@@ -3027,7 +2910,90 @@ paths:
                                             type: array
                                             description: Lista das Tarifas cobradas sobre Serviço relacionadas a Modalidade de Pagamento Pós-Pagas
                                             items:
-                                              $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items'
+                                              type: object
+                                              required:
+                                                - name
+                                                - code
+                                                - chargingTriggerInfo
+                                                - prices
+                                                - minimum
+                                                - maximum
+                                              properties:
+                                                name:
+                                                  type: string
+                                                  enum:
+                                                    - ANUIDADE_CARTAO_BASICO_NACIONAL
+                                                    - ANUIDADE_CARTAO_BASICO_INTERNACIONAL
+                                                    - ANUIDADE_DIFERENCIADA
+                                                    - UTILIZACAO_CANAIS_ATENDIMENTO_RETIRADA_ESPECIE_BRASIL
+                                                    - UTILIZACAO_CANAIS_ATENDIMENTO_RETIRADA_ESPECIE_EXTERIOR
+                                                    - AVALIACAO_EMERGENCIAL_CREDITO
+                                                    - FORNECIMENTO_SEGUNDA_VIA_FUNCAO_CREDITO
+                                                    - PAGAMENTO_CONTAS_UTILIZANDO_FUNCAO_CREDITO
+                                                    - SMS
+                                                  description: Denominação de Serviços relacionados à Modalidade de Contas de Pagamento Pós-Pagas (Vide ENUM)
+                                                  example: ANUIDADE_CARTAO_BASICO_NACIONAL
+                                                code:
+                                                  type: string
+                                                  enum:
+                                                    - ANUIDADE_NACIONAL
+                                                    - ANUIDADE_INTERNACIONAL
+                                                    - ANUIDADE_DIFERENCIADA
+                                                    - SAQUE_CARTAO_BRASIL
+                                                    - SAQUE_CARTAO_EXTERIOR
+                                                    - AVALIACAO_EMERGENCIAL_CREDITO
+                                                    - EMISSAO_SEGUNDA_VIA
+                                                    - TARIFA_PAGAMENTO_CONTAS
+                                                    - SMS
+                                                  description: Sigla de identificação do Serviço relacionado à Modalidade de Contas de Pagamento Pós-Pagas (Vide ENUM)
+                                                  example: ANUIDADE_NACIONAL
+                                                chargingTriggerInfo:
+                                                  type: string
+                                                  maxLength: 2000
+                                                  pattern: \w*\W*
+                                                  description: 'Fatos geradores de cobrança que incidem sobre as Modalidades de Contas de Pagamento Pós-Pagas informada, para pessoa jurídica. (Campo Livre)'
+                                                  example: 'Disponibilização de rede de estabelecimentos afiliados, instalada no País, para pagamentos de bens e serviços, cobrada no máximo uma vez a cada doze meses, admitido o parcelamento da cobrança'
+                                                prices:
+                                                  type: array
+                                                  description: Lista distribuição preços tarifas de serviços
+                                                  items:
+                                                    type: object
+                                                    required:
+                                                      - interval
+                                                      - value
+                                                      - currency
+                                                      - customers
+                                                    properties:
+                                                      interval:
+                                                        $ref: '#/paths/~1personal-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalAccounts/items/properties/serviceBundles/items/properties/prices/items/properties/interval'
+                                                      value:
+                                                        type: string
+                                                        pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
+                                                        maxLength: 12
+                                                        x-cds-type: AmountString
+                                                        description: |
+                                                          Valor da mediana de cada faixa relativa ao serviço ofertado, informado no período, conforme Res nº 32 BCB, 2020. p.ex. '45.00' (representa um valor monetário. p.ex: 1547368.92. Este valor, considerando que a moeda seja BRL, significa R$ 1.547.368,92. O único separador presente deve ser o '.' (ponto) para indicar a casa decimal. Não deve haver separador de milhar)
+                                                        example: '2000.00'
+                                                      currency:
+                                                        $ref: '#/paths/~1personal-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalAccounts/items/properties/termsConditions/properties/minimumBalance/properties/currency'
+                                                      customers:
+                                                        type: object
+                                                        description: Percentual de clientes em cada faixa
+                                                        required:
+                                                          - rate
+                                                        properties:
+                                                          rate:
+                                                            type: string
+                                                            description: Percentual de clientes em cada faixa.
+                                                            pattern: '^[0-9](\.[0-9]{4})$|^NA$'
+                                                            example: '0.1500'
+                                                            maxLength: 6
+                                                  minItems: 4
+                                                  maxItems: 4
+                                                minimum:
+                                                  $ref: '#/paths/~1personal-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalAccounts/items/properties/serviceBundles/items/properties/minimum'
+                                                maximum:
+                                                  $ref: '#/paths/~1personal-accounts/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalAccounts/items/properties/serviceBundles/items/properties/maximum'
                                             minItems: 1
                                             maxItems: 9
                                       interest:
@@ -3291,7 +3257,7 @@ paths:
                                                 prices:
                                                   type: array
                                                   items:
-                                                    $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
+                                                    $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
                                                   minItems: 4
                                                   maxItems: 4
                                                 minimum:
@@ -3962,7 +3928,7 @@ paths:
                                                 prices:
                                                   type: array
                                                   items:
-                                                    $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
+                                                    $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
                                                   minItems: 4
                                                   maxItems: 4
                                                   description: Lista distribuição preços tarifas de serviços
@@ -5338,7 +5304,7 @@ paths:
                                               prices:
                                                 type: array
                                                 items:
-                                                  $ref: '#/paths/~1personal-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/personalCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
+                                                  $ref: '#/paths/~1business-credit-cards/get/responses/200/content/application~1json/schema/properties/data/properties/brand/properties/companies/items/properties/businessCreditCards/items/properties/fees/properties/services/items/properties/prices/items'
                                                 minItems: 4
                                                 maxItems: 4
                                                 description: lista das faixas dos  valores de tarfas cobradas
