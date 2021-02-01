@@ -1103,6 +1103,7 @@ paths:
                                   example: '50685362000135'
                                 urlComplementaryList:
                                   type: string
+                                  description: URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber.
                                   maxLength: 1024
                                   pattern: \w*\W*
                                   example: 'https://example.com/mobile-banking'
@@ -1126,7 +1127,7 @@ paths:
                                               - OUVIDORIA
                                               - CHAT
                                               - OUTROS
-                                            description: Tipo de canal de atendimento eletrônico
+                                            description: 'Tipo de canal de atendimento eletrônico. Restrição - O Tipo de Canal determina o Tipo de Acesso a ele relacionado: URL para acesso ao internet banking, URL para aquisição do app, URL da central,URL do SAC, URL da ouvidoria, URL para chat.'
                                             example: CHAT
                                           additionalInfo:
                                             type: string
