@@ -2244,6 +2244,7 @@ components:
           example: 'https://empresaa1.com/business_unarranged_account_overdraft'
     BusinessUnarrangedAccountOverdraftBrand:
       type: object
+      description: Organização titular das dependências
       required:
         - name
         - companies
@@ -2261,6 +2262,7 @@ components:
           description: Companies traz uma lista de todas as instituições da Marca
     BusinessUnarrangedAccountOverdraftCompany:
       type: object
+      description: Lista de adiantamento a depositante
       required:
         - name
         - cnpjNumber
