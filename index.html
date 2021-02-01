@@ -13870,7 +13870,7 @@ This operation does not require authentication
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
@@ -14050,7 +14050,7 @@ This operation does not require authentication
           </span><span class="p">},</span><span class="w">
           </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
               </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
@@ -14104,7 +14104,12 @@ This operation does not require authentication
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Organização controladora do grupo de instituições financeiras</p>
+
+<h3 id='schemas-metricas-propriedades'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -14133,6 +14138,7 @@ This operation does not require authentication
 <a id="schema_BusinessInvoiceFinancingsCompanies"></a>
 <a id="tocSbusinessinvoicefinancingscompanies"></a>
 <a id="tocsbusinessinvoicefinancingscompanies"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Empresa A1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
@@ -14193,7 +14199,7 @@ This operation does not require authentication
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"interestRates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -14368,7 +14374,7 @@ This operation does not require authentication
 <a id="tocsbusinessinvoicefinancingsinterestrates"></a></p>
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"referentialRateIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEM_INDEXADOR_TAXA"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -14423,7 +14429,7 @@ This operation does not require authentication
 </thead><tbody>
 <tr>
 <td>referentialRateIndexer</td>
-<td>string</td>
+<td><a href="#schemaenumreferentialrateindexer">EnumReferentialRateIndexer</a></td>
 <td>true</td>
 <td>Tipos de taxas referenciais ou indexadores, conforme Anexo 5: Taxa referencial ou Indexador (Indx), do Documento 3040</td>
 </tr>
@@ -14450,90 +14456,6 @@ This operation does not require authentication
 <td>string</td>
 <td>true</td>
 <td>Percentual máximo cobrado (taxa efetiva) no mês de referência, para os Direitos Creditórios Descontados contratado  A apuração pode acontecer com até 4 casas decimais. O preenchimento deve respeitar as 4 casas decimais, mesmo que venham preenchidas com zeros (representação de porcentagem p.ex: 0.15. Este valor representa 15%. O valor 1 representa 100%)</td>
-</tr>
-</tbody></table>
-<h4 id='schemas-metricas-propriedades-enumerated-values'>Enumerated Values</h4>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Código</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>referentialRateIndexer</td>
-<td>SEM_INDEXADOR_TAXA</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>PRE_FIXADO</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_TR_TBF</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_TJLP</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_LIBOR</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>POS_FIXADO_TLP</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTRAS_TAXAS_POS_FIXADAS</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>FLUTUANTES_CDI</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>FLUTUANTES_SELIC</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTRAS_TAXAS_FLUTUANTES</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>INDICES_PRECOS_IGPM</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>INDICES_PRECOS_IPCA</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>INDICES_PRECOS_IPCC</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTROS_INDICES_PRECO</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TCR_PRE</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TCR_POS</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TRFC_PRE</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>CREDITO_RURAL_TRFC_POS</td>
-</tr>
-<tr>
-<td>referentialRateIndexer</td>
-<td>OUTROS_INDEXADORES</td>
 </tr>
 </tbody></table>
 
@@ -26510,7 +26432,7 @@ Dependência de instituições financeiras e demais instituições, autorizadas 
 <td>» brand</td>
 <td><a href="#schemabusinessinvoicefinancingsbrand">BusinessInvoiceFinancingsBrand</a></td>
 <td>true</td>
-<td></td>
+<td>Organização controladora do grupo de instituições financeiras</td>
 </tr>
 <tr>
 <td>links</td>
