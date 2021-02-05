@@ -10822,6 +10822,7 @@ This operation does not require authentication
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Empresa da Organização A"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"urlComplementaryList"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/mobile-banking"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"contractors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -10911,6 +10912,7 @@ This operation does not require authentication
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Empresa da Organização A"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50685362000135"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"urlComplementaryList"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/mobile-banking"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"contractors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -10994,6 +10996,12 @@ This operation does not require authentication
 <td>string</td>
 <td>true</td>
 <td>Número completo do CNPJ da instituição</td>
+</tr>
+<tr>
+<td>urlComplementaryList</td>
+<td>string(URIString)</td>
+<td>false</td>
+<td>URL do link que conterá a lista complementar com os nomes e CNPJs agrupados sob o mesmo cnpjNumber. Os contidos nessa lista possuem as mesmas características para produtos e serviços.<br>Endereço eletrônico de acesso ao canal. URLs são limitadas a 2048 caracteres mas, para o contexto do Sistema Financeiro aberto, será adotado a metade deste tamanho.</td>
 </tr>
 <tr>
 <td>contractors</td>
