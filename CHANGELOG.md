@@ -45,6 +45,7 @@
 * Corrige a OAS de `outages` que estava sem o atributo `unavailableEndpoints` que já estava definido no site.
 * Corrige divergências entre site e OAS, a partir desta versão o site é gerado com base nas especificações definidas.
 * Corrige exemplo de `ResponseBankingAgentsList` adicionando `urlComplementaryList`
+* Corrige valores da enumeração `PersonalCreditCardFeesServiceName` onde não estava presente o valor `ANUIDADE_DIFERENCIADA`.
 
 # v1.0.0-rc5.3
 [19/01/2021]
