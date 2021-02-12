@@ -23,6 +23,7 @@ example:
       companies:
         - name: "Empresa A1"
           cnpjNumber: "45086338000178"
+          urlComplementaryList: "https://example.com/mobile-banking"
           contractors:
             - name: "Empresa Contratante 1"
               cnpjNumber: "99558332000137"
